@@ -1,0 +1,1255 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Party-Perfkt</title>
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+
+  <!-- Favicons -->
+  <link href="http://localhost/base/assets/img/3.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Main CSS File -->
+  <link href="assets/css/main.css" rel="stylesheet">
+
+
+  <!-- my addons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+</head>
+
+<style>
+  /* Container for scrolling */
+.scrolling-message {
+  display: flex;
+  white-space: nowrap;
+  overflow: hidden;
+  animation: scroll-left 13s linear infinite;
+}
+
+/* Scroll animation */
+@keyframes scroll-left {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+/* Styling for the offer text */
+.offer-text {
+  font-size: 18px;
+  font-weight: 600;
+  color: #fff;
+}
+
+/* Icons styling */
+.fas {
+  color: #ff6600;
+  font-size: 20px;
+}
+
+/* Spacing between elements */
+.mr-2 {
+  margin-right: 10px;
+}
+
+.hero img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensures the image maintains its aspect ratio */
+  transition: transform 1s ease-in-out;
+  max-width: 100%;  /* Prevent the image from being stretched too much */
+  max-height: 100vh; /* Make sure it doesn't grow beyond the viewport height */
+}
+
+.hero img.zoom {
+  transform: scale(1.5); /* Zoom in the image */
+}
+
+
+</style>
+
+<body class="index-page">
+
+  <header id="header" class="header fixed-top">
+
+    <div class="topbar d-flex align-items-center">
+      <div class="container d-flex justify-content-center justify-content-md-between">
+        <div class="contact-info d-flex align-items-center">
+          <i class="bi bi-envelope d-flex align-items-center"><a href="partyperfkt@gmail.com">partyperfkt@gmail.com</a></i>
+          <i class="bi bi-phone d-flex align-items-center ms-4"><span>+91 9398687467</span></i>
+          <i class="bi bi-instagram d-flex align-items-center ms-4"><a href="partyperfkt@gmail.com">partyperfkt</a></i>
+          <i class="bi bi-whatsapp d-flex align-items-center ms-4"><a href="partyperfkt@gmail.com">partyperfkt@gmail.com</a></i>
+        </div>
+        <div class="languages d-none d-md-flex align-items-center">
+          <ul>
+            <li>Visakhapatnam</li>
+            <li><a href="#">Vizinagaram</a></li>
+          </ul>
+        </div>
+      </div>
+    </div><!-- End Top Bar -->
+
+    <div class="branding d-flex align-items-cente">
+
+      <div class="container position-relative d-flex align-items-center justify-content-between">
+        <a href="index.html" class="logo d-flex align-items-center me-auto me-xl-0">
+          <!-- Uncomment the line below if you also wish to use an image logo -->
+          <img src="http://localhost/base/assets/img/3.png" alt="" style="max-height: 50px;">
+          <h1 class="sitename">Party-Perfkt</h1>
+        </a>
+
+        <nav id="navmenu" class="navmenu">
+          <ul>
+            <li><a href="#hero" class="active">Home<br></a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#menu">Menu</a></li>
+            <li><a href="#specials">Best Sellers</a></li>
+            <li><a href="#events">Events</a></li>
+            <li><a href="#chefs">Our Team</a></li>
+            <li><a href="#gallery">Gallery</a></li>
+            <li class="dropdown"><a href="#"><span>Dropdown</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+              <ul>
+                <li><a href="#">Dropdown 1</a></li>
+                <li class="dropdown"><a href="#"><span>Deep Dropdown</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+                  <ul>
+                    <li><a href="#">Deep Dropdown 1</a></li>
+                    <li><a href="#">Deep Dropdown 2</a></li>
+                    <li><a href="#">Deep Dropdown 3</a></li>
+                    <li><a href="#">Deep Dropdown 4</a></li>
+                    <li><a href="#">Deep Dropdown 5</a></li>
+                  </ul>
+                </li>
+                <li><a href="#">Dropdown 2</a></li>
+                <li><a href="#">Dropdown 3</a></li>
+                <li><a href="#">Dropdown 4</a></li>
+              </ul>
+            </li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+          <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+        </nav>
+
+        <a class="btn-book-a-table d-none d-xl-block" href="#book-a-table">Book a Table</a>
+
+      </div>
+
+    </div>
+    <div class="branding d-flex align-items-center">
+      <div class="scrolling-message d-flex align-items-center">
+        <span class="offer-text">Hurrah!! <i class="fas fa-gift mr-2"></i> LIMITED TIME OFFER: Use Coupon "MORNING" to get Rs 300 off for morning slots. <i class="fas fa-clock"></i> Hurry up!</span>
+      </div>
+    </div>
+    
+
+  </header>
+
+  <main class="main">
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero section dark-background">
+      <img src="assets/img/hero-bg2.png" alt="Hero Background" id="hero-image" data-aos="fade-in">
+
+    <div class="container mt-3">
+      <div class="row">
+        <div class="col-lg-8 d-flex flex-column align-items-center align-items-lg-start mt-4 mt-lg-0">
+          <h2><span>Welcome to Party-Perfkt!!</span></h2>
+          <h2 data-aos="fade-up" id="typewriter" data-aos-delay="100"><span>Party-Perfkt</span></h2>
+          <!-- <p class="fs-6" data-aos="fade-up" data-aos-delay="200">Delivering great services for more than 10K+ happy customers!</p> -->
+          <p class="fs-6" data-aos="fade-up" data-aos-delay="200">At Party-Perfkt, we believe every celebration deserves to be extraordinary. Whether birthday bash, anniversary party,we provide a seamless event experience, and personalized service.</p>
+          <div class="d-flex mt-4" data-aos="fade-up" data-aos-delay="300">
+            <a href="#menu" class="cta-btn">Our Services</a>
+            <a href="#book-a-table" class="cta-btn">Book Now</a>
+          </div>
+        </div>
+        <div class="col-lg-4 d-flex align-items-center justify-content-center mt-5 mt-lg-0">
+          <a href="https://www.youtube.com/watch?v=Y7f98aduVJ8" class="glightbox pulsating-play-btn"></a>
+        </div>
+      </div>
+    </div>
+    </section>
+    
+
+
+    <!-- About Section -->
+    <section id="about" class="about section">
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="row gy-4">
+          <div class="col-lg-6 order-1 order-lg-2">
+            <img src="assets/img/about.png" class="img-fluid about-img" alt="">
+          </div>
+          <div class="col-lg-6 order-2 order-lg-1 content">
+            <h3>About Party-Perfkt</h3>
+            <p class="fst-italic">
+              Welcome to Party Perfkt, Where we specialize in creating unforgettable private event experiences. Whether it's a birthday, anniversary, date, or any special occasion, we provide:
+            </p>
+            <ul>
+              <li><i class="bi bi-check2-all"></i> <span>State-of-the-art audio and video for a premium entertainment experience</span></li>
+              <li><i class="bi bi-check2-all"></i> <span>Delicious food, custom cakes, and vibrant flowers to make your event memorable</span></li>
+              <li><i class="bi bi-check2-all"></i> <span>Themed decorations to bring your vision to life</span></li>
+              <li><i class="bi bi-check2-all"></i> <span>A dedicated team to handle every detail, ensuring you can relax and enjoy your time</span></li>
+
+            </ul>
+            <p>
+              Let Party Perfkt transform your celebrations into extraordinary memories with a personalized touch and seamless service!
+            </p>
+          </div>
+        </div>
+
+      </div>
+
+    </section><!-- /About Section -->
+
+    <!-- Why Us Section -->
+    <section id="why-us" class="why-us section">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>WHY US</h2>
+        <p>Why Choose Our Services</p>
+      </div><!-- End Section Title -->
+
+      <div class="container">
+
+        <div class="row gy-4">
+
+          <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
+            <div class="card-item">
+              <span>01</span>
+              <h4><a href="" class="stretched-link">Affordability</a></h4>
+              <p>We believe in making luxury accessible. Our competitive pricing ensures you get top-notch decor and services without compromising on quality.</p>
+            </div>
+          </div><!-- Card Item -->
+
+          <div class="col-lg-4" data-aos="fade-up" data-aos-delay="200">
+            <div class="card-item">
+              <span>02</span>
+              <h4><a href="" class="stretched-link">Customization</a></h4>
+              <p>Your event is unique, and so are our services. We work closely with you to understand your vision and bring it to life with personalized touches that reflect your style.</p>
+            </div>
+          </div><!-- Card Item -->
+
+          <div class="col-lg-4" data-aos="fade-up" data-aos-delay="300">
+            <div class="card-item">
+              <span>03</span>
+              <h4><a href="" class="stretched-link">Mini Theater Experience</a></h4>
+              <p>Immerse yourself in our bespoke mini theater setups, perfect for private screenings, movie nights, or gaming parties. We provide state-of-the-art equipment and cozy seating arrangements to elevate your entertainment experience.</p>
+            </div>
+          </div><!-- Card Item -->
+
+          <div class="col-lg-4" data-aos="fade-up" data-aos-delay="300">
+            <div class="card-item">
+              <span>04</span>
+              <h4><a href="" class="stretched-link">Proffesionalism</a></h4>
+              <p>With years of experience in event planning and decor, our team is committed to professionalism and excellence. We handle every aspect of your event with care and attention to detail.</p>
+            </div>
+          </div>
+
+          <div class="col-lg-4" data-aos="fade-up" data-aos-delay="300">
+            <div class="card-item">
+              <span>05</span>
+              <h4><a href="" class="stretched-link">Premium Decor</a></h4>
+              <p>Elevate your event with our exquisite decorations tailored to your theme and preferences. From elegant centerpieces to eye-catching backdrops, our team ensures every detail is meticulously crafted to create a stunning ambiance.</p>
+            </div>
+          </div>
+
+          <div class="col-lg-4" data-aos="fade-up" data-aos-delay="300">
+            <div class="card-item">
+              <span>06</span>
+              <h4><a href="" class="stretched-link">Cakes & Flowers</a></h4>
+              <p>Add just XX rupees and enjoy an additional half-kilogram of cake! and a bouquet of flowers! and make your people full of blushed and happiness.</p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </section><!-- /Why Us Section -->
+
+    <!-- Menu Section -->
+    <section id="menu" class="menu section">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Menu</h2>
+        <p>Check Our Add-ons</p>
+      </div><!-- End Section Title -->
+
+      <div class="container isotope-layout" data-default-filter="*" data-layout="masonry" data-sort="original-order">
+
+        <div class="row" data-aos="fade-up" data-aos-delay="100">
+          <div class="col-lg-12 d-flex justify-content-center">
+            <ul class="menu-filters isotope-filters">
+              <li data-filter="*" class="filter-active">All add-ons</li>
+               <li data-filter=".filter-starters">Decorations</li>
+              <li data-filter=".filter-salads">Bouquets</li>
+              <li data-filter=".filter-specialty">Cakes</li>
+            </ul>
+          </div>
+        </div><!-- Menu Filters -->
+
+        <div class="row isotope-container" data-aos="fade-up" data-aos-delay="200">
+
+          <!-- Fog Effect -->
+          <div class="col-lg-6 menu-item isotope-item filter-starters">
+              <img src="assets/img/menu/fogeffect.png" class="menu-img" alt="">
+              <div class="menu-content">
+                  <a href="/decorations.html">Fog Effect</a><span>₹ 499</span>
+              </div>
+              <div class="menu-ingredients">
+                  Stunning fog effect for your event.
+              </div>
+          </div><!-- Menu Item -->
+      
+          <!-- Photo Clippings (16 Pics) -->
+          <div class="col-lg-6 menu-item isotope-item filter-starters">
+              <img src="assets/img/menu/photoclippings.jpg" class="menu-img" alt="">
+              <div class="menu-content">
+                  <a href="/decorations.html">Photo Clippings (16 Pics)</a><span>₹ 499</span>
+              </div>
+              <div class="menu-ingredients">
+                  Get 16 beautifully printed photo clippings for your special occasion.
+              </div>
+          </div><!-- Menu Item -->
+      
+          <!-- Party Props -->
+          <div class="col-lg-6 menu-item isotope-item filter-starters">
+              <img src="assets/img/menu/partyprops.jpg" class="menu-img" alt="">
+              <div class="menu-content">
+                  <a href="/decorations.html">Party Props</a><span>₹ 199</span>
+              </div>
+              <div class="menu-ingredients">
+                  Fun props for your party celebration.
+              </div>
+          </div><!-- Menu Item -->
+      
+          <!-- LED Numbers -->
+          <div class="col-lg-6 menu-item isotope-item filter-starters">
+              <img src="assets/img/menu/lednumbers.jpg" class="menu-img" alt="">
+              <div class="menu-content">
+                  <a href="/decorations.html">LED Numbers</a><span>₹ 99</span>
+              </div>
+              <div class="menu-ingredients">
+                  LED illuminated numbers for your event.
+              </div>
+          </div><!-- Menu Item -->
+
+      
+          <!-- HBD Letters -->
+          <div class="col-lg-6 menu-item isotope-item filter-starters">
+              <img src="assets/img/menu/hbdletters.jpg" class="menu-img" alt="">
+              <div class="menu-content">
+                  <a href="/decorations.html">HBD Letters</a><span>₹ 99</span>
+              </div>
+              <div class="menu-ingredients">
+                  Stylish "Happy Birthday" letters for your celebration.
+              </div>
+          </div><!-- Menu Item -->
+      
+          <!-- Candle Path -->
+          <div class="col-lg-6 menu-item isotope-item filter-starters">
+              <img src="assets/img/menu/candlepath.png" class="menu-img" alt="">
+              <div class="menu-content">
+                  <a href="/decorations.html">Candle Path</a><span>₹ 250</span>
+              </div>
+              <div class="menu-ingredients">
+                  Create a beautiful candle path for a romantic ambiance.
+              </div>
+          </div><!-- Menu Item -->
+
+          <div class="col-lg-6 menu-item isotope-item filter-specialty">
+            <img src="assets/img/menu/cake.jpg" class="menu-img" alt="">
+            <div class="menu-content">
+                <a href="/cakes.html">Chocolate Cake</a><span>₹ 799</span>
+            </div>
+            <div class="menu-ingredients">
+                A rich, decadent chocolate cake with layers of creamy frosting.
+            </div>
+        </div><!-- Menu Item -->
+    
+        <!-- Vanilla Cake -->
+        <div class="col-lg-6 menu-item isotope-item filter-specialty">
+            <img src="assets/img/menu/cake.jpg" class="menu-img" alt="">
+            <div class="menu-content">
+                <a href="/cakes.html">Vanilla Cake</a><span>₹ 699</span>
+            </div>
+            <div class="menu-ingredients">
+                A light and fluffy vanilla cake with a smooth buttercream frosting.
+            </div>
+        </div><!-- Menu Item -->
+    
+        <!-- Red Velvet Cake -->
+        <div class="col-lg-6 menu-item isotope-item filter-specialty">
+            <img src="assets/img/menu/cake.jpg" class="menu-img" alt="">
+            <div class="menu-content">
+                <a href="/cakes.html">Red Velvet Cake</a><span>₹ 899</span>
+            </div>
+            <div class="menu-ingredients">
+                A delicious red velvet cake with cream cheese frosting.
+            </div>
+        </div><!-- Menu Item -->
+    
+        <!-- Black Forest Cake -->
+        <div class="col-lg-6 menu-item isotope-item filter-specialty">
+            <img src="assets/img/menu/cake.jpg" class="menu-img" alt="">
+            <div class="menu-content">
+                <a href="/cakes.html">Black Forest Cake</a><span>₹ 999</span>
+            </div>
+            <div class="menu-ingredients">
+                A rich cake with layers of whipped cream, chocolate shavings, and cherries.
+            </div>
+        </div><!-- Menu Item -->
+    
+        <!-- Fruit Cake -->
+        <div class="col-lg-6 menu-item isotope-item filter-specialty">
+            <img src="assets/img/menu/cake.jpg" class="menu-img" alt="">
+            <div class="menu-content">
+                <a href="/cakes.html">Fruit Cake</a><span>₹ 849</span>
+            </div>
+            <div class="menu-ingredients">
+                A moist cake loaded with fresh seasonal fruits and nuts.
+            </div>
+        </div>
+
+         <!-- Rose Bouquet -->
+    <div class="col-lg-6 menu-item isotope-item filter-salads">
+      <img src="assets/img/menu/rosebouquet.png" class="menu-img" alt="">
+      <div class="menu-content">
+          <a href="/flowers.html">Rose Bouquet</a><span>₹ 499</span>
+      </div>
+      <div class="menu-ingredients">
+          A beautiful bouquet of fresh red roses, perfect for any occasion.
+      </div>
+  </div><!-- Menu Item -->
+
+  <!-- Lily Bouquet -->
+  <div class="col-lg-6 menu-item isotope-item filter-salads">
+      <img src="assets/img/menu/rosebouquet.png" class="menu-img" alt="">
+      <div class="menu-content">
+          <a href="/flowers.html">Lily Bouquet</a><span>₹ 599</span>
+      </div>
+      <div class="menu-ingredients">
+          A lovely bouquet of fresh white lilies to brighten up any room.
+      </div>
+  </div><!-- Menu Item -->
+
+  <!-- Mixed Flower Bouquet -->
+  <div class="col-lg-6 menu-item isotope-item filter-salads">
+      <img src="assets/img/menu/rosebouquet.png" class="menu-img" alt="">
+      <div class="menu-content">
+          <a href="/flowers.html">Mixed Flower Bouquet</a><span>₹ 649</span>
+      </div>
+      <div class="menu-ingredients">
+          A vibrant mix of seasonal flowers, ideal for any special event.
+      </div>
+  </div><!-- Menu Item -->
+
+  <!-- Tulip Bouquet -->
+  <div class="col-lg-6 menu-item isotope-item filter-salads">
+      <img src="assets/img/menu/rosebouquet.png" class="menu-img" alt="">
+      <div class="menu-content">
+          <a href="/flowers.html">Tulip Bouquet</a><span>₹ 799</span>
+      </div>
+      <div class="menu-ingredients">
+          A stunning bouquet of fresh, colorful tulips, symbolizing love and elegance.
+      </div>
+  </div><!-- Menu Item -->
+
+  <!-- Sunflower Bouquet -->
+  <div class="col-lg-6 menu-item isotope-item filter-salads">
+      <img src="assets/img/menu/rosebouquet.png" class="menu-img" alt="">
+      <div class="menu-content">
+          <a href="/flowers.html">Sunflower Bouquet</a><span>₹ 699</span>
+      </div>
+      <div class="menu-ingredients">
+          A cheerful bouquet of sunflowers to brighten anyone's day.
+      </div>
+  </div><!-- Menu Item -->
+      
+      </div><!-- End Menu Row -->
+
+      </div>
+
+    </section><!-- /Menu Section -->
+
+    <!-- Specials Section -->
+    <section id="specials" class="specials section">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Best Sellers</h2>
+        <p>Check Our Best Sellers</p>
+      </div><!-- End Section Title -->
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="row">
+            <div class="col-lg-3">
+                <ul class="nav nav-tabs flex-column">
+                    <!-- Rose Bouquet -->
+                    <li class="nav-item">
+                        <a class="nav-link active show" data-bs-toggle="tab" href="#item-tab-1">Rose Bouquet</a>
+                    </li>
+                    <!-- Black Forest Cake -->
+                    <li class="nav-item">
+                        <a class="nav-link" data-bs-toggle="tab" href="#item-tab-2">Black Forest Cake</a>
+                    </li>
+                    <!-- Fog Effect -->
+                    <li class="nav-item">
+                        <a class="nav-link" data-bs-toggle="tab" href="#item-tab-3">Fog Effect</a>
+                    </li>
+                    <!-- Party Props -->
+                    <li class="nav-item">
+                        <a class="nav-link" data-bs-toggle="tab" href="#item-tab-4">Party Props</a>
+                    </li>
+                    <!-- Photo Clippings -->
+                    <li class="nav-item">
+                        <a class="nav-link" data-bs-toggle="tab" href="#item-tab-5">Photo Clippings (16 Pics)</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-lg-9 mt-4 mt-lg-0">
+                <div class="tab-content">
+                    <!-- Rose Bouquet -->
+                    <div class="tab-pane active show" id="item-tab-1">
+                        <div class="row">
+                            <div class="col-lg-8 details order-2 order-lg-1">
+                                <h3>Rose Bouquet</h3>
+                                <p class="fst-italic">A beautiful bouquet of fresh red roses, perfect for any occasion.</p>
+                                <p>Gift a classic bouquet of red roses to express love, passion, and admiration. Ideal for birthdays, anniversaries, or just to make someone's day special.</p>
+                                <h3>₹ 499</h3>
+                            </div>
+                            <div class="col-lg-4 text-center order-1 order-lg-2">
+                                <img src="assets/img/specials-1.png" alt="" class="img-fluid">
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Black Forest Cake -->
+                    <div class="tab-pane" id="item-tab-2">
+                        <div class="row">
+                            <div class="col-lg-8 details order-2 order-lg-1">
+                                <h3>Black Forest Cake</h3>
+                                <p class="fst-italic">A rich cake with layers of whipped cream, chocolate shavings, and cherries.</p>
+                                <p>This delectable cake combines the richness of chocolate, cream, and cherries to create the perfect dessert for any occasion. A must-try for all cake lovers!</p>
+                                <h3>₹ 499</h3>
+                            </div>
+                            <div class="col-lg-4 text-center order-1 order-lg-2">
+                                <img src="assets/img/specials-1.png" alt="" class="img-fluid">
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Fog Effect -->
+                    <div class="tab-pane" id="item-tab-3">
+                        <div class="row">
+                            <div class="col-lg-8 details order-2 order-lg-1">
+                                <h3>Fog Effect</h3>
+                                <p class="fst-italic">A stunning fog effect for your event.</p>
+                                <p>Create a magical atmosphere with our fog effect. Perfect for parties, performances, and any event where you want to add a touch of mystery and drama.</p>
+                                <h3>₹ 499</h3>
+                            </div>
+                            <div class="col-lg-4 text-center order-1 order-lg-2">
+                                <img src="assets/img/specials-1.png" alt="" class="img-fluid">
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Party Props -->
+                    <div class="tab-pane" id="item-tab-4">
+                        <div class="row">
+                            <div class="col-lg-8 details order-2 order-lg-1">
+                                <h3>Party Props</h3>
+                                <p class="fst-italic">Fun props for your party celebration.</p>
+                                <p>Get your party started with our fun and quirky party props! From hats and glasses to fun signs, these props will make your event unforgettable.</p>
+                                <h3>₹ 499</h3>
+                            </div>
+                            <div class="col-lg-4 text-center order-1 order-lg-2">
+                                <img src="assets/img/specials-1.png" alt="" class="img-fluid">
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Photo Clippings (16 Pics) -->
+                    <div class="tab-pane" id="item-tab-5">
+                        <div class="row">
+                            <div class="col-lg-8 details order-2 order-lg-1">
+                                <h3>Photo Clippings (16 Pics)</h3>
+                                <p class="fst-italic">Get 16 beautifully printed photo clippings for your special occasion.</p>
+                                <p>Our photo clipping service prints your favorite photos and cuts them into beautiful, framed pieces. Perfect for displaying memories at parties, weddings, or any event.</p>
+                                <h3>₹ 499</h3>
+                            </div>
+                            <div class="col-lg-4 text-center order-1 order-lg-2">
+                                <img src="assets/img/specials-1.png" alt="" class="img-fluid">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+    </div>
+    
+
+    </section><!-- /Specials Section -->
+
+    <!-- Events Section -->
+    <section id="events" class="events section">
+
+      <img class="slider-bg" src="assets/img/events-bg.jpg" alt="" data-aos="fade-in">
+    
+      <div class="container">
+    
+        <div class="swiper init-swiper" data-aos="fade-up" data-aos-delay="100">
+          <script type="application/json" class="swiper-config">
+            {
+              "loop": true,
+              "speed": 600,
+              "autoplay": {
+                "delay": 5000
+              },
+              "slidesPerView": "auto",
+              "pagination": {
+                "el": ".swiper-pagination",
+                "type": "bullets",
+                "clickable": true
+              }
+            }
+          </script>
+          <div class="swiper-wrapper">
+    
+            <!-- Mini Theatre with Friends and Family -->
+            <div class="swiper-slide">
+              <div class="row gy-4 event-item">
+                <div class="col-lg-6">
+                  <img src="assets/img/hero-bg5.png" class="img-fluid" alt="Mini Theatre with Friends and Family">
+                </div>
+                <div class="col-lg-6 pt-4 pt-lg-0 content">
+                  <h3>Mini Theatre with Friends and Family</h3>
+                  <div class="price">
+                    <p><span>$250</span></p>
+                  </div>
+                  <p class="fst-italic">
+                    Create unforgettable memories with your loved ones by enjoying a private mini theatre experience, tailored just for your group.
+                  </p>
+                  <ul>
+                    <li><i class="bi bi-check2-circle"></i> <span>Customized movie selection for your group</span></li>
+                    <li><i class="bi bi-check2-circle"></i> <span>Snacks and refreshments provided</span></li>
+                    <li><i class="bi bi-check2-circle"></i> <span>Comfortable seating arrangement for all attendees</span></li>
+                  </ul>
+                  <p>
+                    Our mini theatre setup is perfect for family gatherings, intimate movie nights, or any occasion where you want to experience cinema in a private, cozy setting.
+                  </p>
+                </div>
+              </div>
+            </div><!-- End Mini Theatre -->
+    
+            <!-- Birthday Events -->
+            <div class="swiper-slide">
+              <div class="row gy-4 event-item">
+                <div class="col-lg-6">
+                  <img src="assets/img/hero-bg5.png" class="img-fluid" alt="Birthday Events">
+                </div>
+                <div class="col-lg-6 pt-4 pt-lg-0 content">
+                  <h3>Birthday Parties</h3>
+                  <div class="price">
+                    <p><span>$189</span></p>
+                  </div>
+                  <p class="fst-italic">
+                    Celebrate your special day with a one-of-a-kind birthday event designed just for you!
+                  </p>
+                  <ul>
+                    <li><i class="bi bi-check2-circle"></i> <span>Themed decorations and activities</span></li>
+                    <li><i class="bi bi-check2-circle"></i> <span>Customizable party packages for all ages</span></li>
+                    <li><i class="bi bi-check2-circle"></i> <span>Delicious cake and snacks included</span></li>
+                  </ul>
+                  <p>
+                    Whether it's a kids' birthday or a milestone celebration, we provide everything you need to make it a memorable day!
+                  </p>
+                </div>
+              </div>
+            </div><!-- End Birthday Parties -->
+    
+            <!-- Mom-to-Be Events -->
+            <div class="swiper-slide">
+              <div class="row gy-4 event-item">
+                <div class="col-lg-6">
+                  <img src="assets/img/hero-bg5.png" class="img-fluid" alt="Mom-to-Be Events">
+                </div>
+                <div class="col-lg-6 pt-4 pt-lg-0 content">
+                  <h3>Mom-to-Be Events</h3>
+                  <div class="price">
+                    <p><span>$220</span></p>
+                  </div>
+                  <p class="fst-italic">
+                    Celebrate the upcoming arrival of your bundle of joy with a beautiful and intimate mom-to-be event.
+                  </p>
+                  <ul>
+                    <li><i class="bi bi-check2-circle"></i> <span>Elegant decor to match your theme</span></li>
+                    <li><i class="bi bi-check2-circle"></i> <span>Fun games and activities for guests</span></li>
+                    <li><i class="bi bi-check2-circle"></i> <span>Customizable packages for baby showers</span></li>
+                  </ul>
+                  <p>
+                    A perfect event to gather family and friends, with personalized touches to make the mom-to-be feel truly special.
+                  </p>
+                </div>
+              </div>
+            </div><!-- End Mom-to-Be Events -->
+    
+            <!-- Small Private Parties -->
+            <div class="swiper-slide">
+              <div class="row gy-4 event-item">
+                <div class="col-lg-6">
+                  <img src="assets/img/hero-bg5.png" class="img-fluid" alt="Small Private Parties">
+                </div>
+                <div class="col-lg-6 pt-4 pt-lg-0 content">
+                  <h3>Small Private Parties</h3>
+                  <div class="price">
+                    <p><span>$150</span></p>
+                  </div>
+                  <p class="fst-italic">
+                    Host an exclusive, intimate event with your closest friends and family, designed to create lasting memories.
+                  </p>
+                  <ul>
+                    <li><i class="bi bi-check2-circle"></i> <span>Exclusive venue rental for small groups</span></li>
+                    <li><i class="bi bi-check2-circle"></i> <span>Custom menus and catering options</span></li>
+                    <li><i class="bi bi-check2-circle"></i> <span>Personalized party planning and support</span></li>
+                  </ul>
+                  <p>
+                    Whether it's a dinner party, anniversary, or celebration, we offer a personalized service to create the perfect atmosphere for your small gathering.
+                  </p>
+                </div>
+              </div>
+            </div><!-- End Small Private Parties -->
+    
+            <!-- More event types can be added here in the future -->
+    
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
+    
+      </div>
+    
+    </section><!-- /Events Section -->
+    
+
+    <!-- Book A Table Section -->
+    <section id="book-a-table" class="book-a-table section">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Join Waitlist</h2>
+        <p>Book Now</p>
+      </div><!-- End Section Title -->
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <form action="forms/book-a-table.php" method="post" role="form" class="php-email-form">
+          <div class="row gy-4">
+            <div class="col-lg-4 col-md-6">
+              <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required="">
+            </div>
+            <div class="col-lg-4 col-md-6">
+              <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" required="">
+            </div>
+            <div class="col-lg-4 col-md-6">
+              <input type="text" class="form-control" name="phone" id="phone" placeholder="Your Phone" required="">
+            </div>
+            <div class="col-lg-4 col-md-6">
+              <input type="date" name="date" class="form-control" id="date" placeholder="Date" required="">
+            </div>
+            <div class="col-lg-4 col-md-6">
+              <input type="time" class="form-control" name="time" id="time" placeholder="Time" required="">
+            </div>
+            <div class="col-lg-4 col-md-6">
+              <input type="number" class="form-control" name="people" id="people" placeholder="# of people" required="">
+            </div>
+            <div class="col-lg-12 col-md-12">
+              <input type="text" class="form-control" name="location" id="location" placeholder="Enter location" required="" value="Visakhapatnam">
+            </div>
+          </div>
+
+          <div class="form-group mt-3">
+            <textarea class="form-control" name="message" rows="5" placeholder="Message"></textarea>
+          </div>
+
+          <div class="text-center mt-3">
+            <div class="loading">Loading</div>
+            <div class="error-message"></div>
+            <div class="sent-message">Your booking request was sent. We will call back or send an Email to confirm your reservation. Thank you!</div>
+            <button type="submit">Join Waitlist</button>
+          </div>
+        </form><!-- End Reservation Form -->
+
+        
+
+      </div>
+
+    </section><!-- /Book A Table Section -->
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="testimonials section">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Customer Reviews</h2>
+        <p>What our customers are saying about us</p>
+      </div><!-- End Section Title -->
+    
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+    
+        <div class="swiper init-swiper" data-speed="600" data-delay="5000" data-breakpoints="{ &quot;320&quot;: { &quot;slidesPerView&quot;: 1, &quot;spaceBetween&quot;: 40 }, &quot;1200&quot;: { &quot;slidesPerView&quot;: 3, &quot;spaceBetween&quot;: 40 } }">
+          <script type="application/json" class="swiper-config">
+            {
+              "loop": true,
+              "speed": 600,
+              "autoplay": {
+                "delay": 5000
+              },
+              "slidesPerView": "auto",
+              "pagination": {
+                "el": ".swiper-pagination",
+                "type": "bullets",
+                "clickable": true
+              },
+              "breakpoints": {
+                "320": {
+                  "slidesPerView": 1,
+                  "spaceBetween": 40
+                },
+                "1200": {
+                  "slidesPerView": 3,
+                  "spaceBetween": 20
+                }
+              }
+            }
+          </script>
+          <div class="swiper-wrapper">
+    
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+                <p>
+                  <i class="bi bi-quote quote-icon-left"></i>
+                  <span>We had an unforgettable anniversary celebration! The private room was beautifully decorated, the cake was beyond our expectations, and the emotional photos captured every special moment. Truly a fantastic experience!</span>
+                  <i class="bi bi-quote quote-icon-right"></i>
+                </p>
+                <img src="assets/img/testimonials/testimonials-1.jpg" class="testimonial-img" alt="">
+                <h3>Saul & Emma</h3>
+              </div>
+            </div><!-- End testimonial item -->
+    
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+                <p>
+                  <i class="bi bi-quote quote-icon-left"></i>
+                  <span>Our birthday party was a hit! The private room was perfect for our guests, and the decoration was elegant and tasteful. Plus, the photo booth captured all our happy moments. Highly recommend!</span>
+                  <i class="bi bi-quote quote-icon-right"></i>
+                </p>
+                <img src="assets/img/testimonials/testimonials-2.jpg" class="testimonial-img" alt="">
+                <h3>Sara & Friends</h3>
+              </div>
+            </div><!-- End testimonial item -->
+    
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+                <p>
+                  <i class="bi bi-quote quote-icon-left"></i>
+                  <span>From the cake to the decorations and the photography – everything exceeded our expectations! The private room made our anniversary so special and intimate. Such a professional service!</span>
+                  <i class="bi bi-quote quote-icon-right"></i>
+                </p>
+                <img src="assets/img/testimonials/testimonials-3.jpg" class="testimonial-img" alt="">
+                <h3>Jena & Mark</h3>
+              </div>
+            </div><!-- End testimonial item -->
+    
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+                <p>
+                  <i class="bi bi-quote quote-icon-left"></i>
+                  <span>The perfect venue for our anniversary celebration! The private setting allowed us to enjoy every moment with our loved ones. The cake was beautiful, and the photography really captured the essence of the day.</span>
+                  <i class="bi bi-quote quote-icon-right"></i>
+                </p>
+                <img src="assets/img/testimonials/testimonials-4.jpg" class="testimonial-img" alt="">
+                <h3>Matt & Julia</h3>
+              </div>
+            </div><!-- End testimonial item -->
+    
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+                <p>
+                  <i class="bi bi-quote quote-icon-left"></i>
+                  <span>We booked a private room for my sister’s birthday, and everything was perfect. The decoration was amazing, the service was top-notch, and the photos captured all the emotions. Truly a magical day!</span>
+                  <i class="bi bi-quote quote-icon-right"></i>
+                </p>
+                <img src="assets/img/testimonials/testimonials-5.jpg" class="testimonial-img" alt="">
+                <h3>John & Rachel</h3>
+              </div>
+            </div><!-- End testimonial item -->
+    
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
+    
+      </div>
+    
+    </section><!-- /Testimonials Section -->
+    
+    
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="gallery section">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Gallery</h2>
+        <p>Some photos from Our Restaurant</p>
+      </div><!-- End Section Title -->
+
+      <div class="container-fluid" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="row g-0">
+
+          <div class="col-lg-3 col-md-4">
+            <div class="gallery-item">
+              <a href="assets/img/gallery/gallery-1.jpg" class="glightbox" data-gallery="images-gallery">
+                <img src="assets/img/gallery/gallery-1.jpg" alt="" class="img-fluid">
+              </a>
+            </div>
+          </div><!-- End Gallery Item -->
+
+          <div class="col-lg-3 col-md-4">
+            <div class="gallery-item">
+              <a href="assets/img/gallery/gallery-2.jpg" class="glightbox" data-gallery="images-gallery">
+                <img src="assets/img/gallery/gallery-2.jpg" alt="" class="img-fluid">
+              </a>
+            </div>
+          </div><!-- End Gallery Item -->
+
+          <div class="col-lg-3 col-md-4">
+            <div class="gallery-item">
+              <a href="assets/img/gallery/gallery-3.jpg" class="glightbox" data-gallery="images-gallery">
+                <img src="assets/img/gallery/gallery-3.jpg" alt="" class="img-fluid">
+              </a>
+            </div>
+          </div><!-- End Gallery Item -->
+
+          <div class="col-lg-3 col-md-4">
+            <div class="gallery-item">
+              <a href="assets/img/gallery/gallery-4.jpg" class="glightbox" data-gallery="images-gallery">
+                <img src="assets/img/gallery/gallery-4.jpg" alt="" class="img-fluid">
+              </a>
+            </div>
+          </div><!-- End Gallery Item -->
+
+          <div class="col-lg-3 col-md-4">
+            <div class="gallery-item">
+              <a href="assets/img/gallery/gallery-5.jpg" class="glightbox" data-gallery="images-gallery">
+                <img src="assets/img/gallery/gallery-5.jpg" alt="" class="img-fluid">
+              </a>
+            </div>
+          </div><!-- End Gallery Item -->
+
+          <div class="col-lg-3 col-md-4">
+            <div class="gallery-item">
+              <a href="assets/img/gallery/gallery-6.jpg" class="glightbox" data-gallery="images-gallery">
+                <img src="assets/img/gallery/gallery-6.jpg" alt="" class="img-fluid">
+              </a>
+            </div>
+          </div><!-- End Gallery Item -->
+
+          <div class="col-lg-3 col-md-4">
+            <div class="gallery-item">
+              <a href="assets/img/gallery/gallery-7.jpg" class="glightbox" data-gallery="images-gallery">
+                <img src="assets/img/gallery/gallery-7.jpg" alt="" class="img-fluid">
+              </a>
+            </div>
+          </div><!-- End Gallery Item -->
+
+          <div class="col-lg-3 col-md-4">
+            <div class="gallery-item">
+              <a href="assets/img/gallery/gallery-8.jpg" class="glightbox" data-gallery="images-gallery">
+                <img src="assets/img/gallery/gallery-8.jpg" alt="" class="img-fluid">
+              </a>
+            </div>
+          </div><!-- End Gallery Item -->
+
+        </div>
+
+      </div>
+
+    </section><!-- /Gallery Section -->
+
+    <!-- Chefs Section -->
+    <section id="chefs" class="chefs section">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Team</h2>
+        <p>Necessitatibus eius consequatur</p>
+      </div><!-- End Section Title -->
+
+      <div class="container">
+
+        <div class="row gy-4">
+
+          <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
+            <div class="member">
+              <img src="assets/img/chefs/chefs-1.jpg" class="img-fluid" alt="">
+              <div class="member-info">
+                <div class="member-info-content">
+                  <h4>Walter White</h4>
+                  <span>Master Chef</span>
+                </div>
+                <div class="social">
+                  <a href=""><i class="bi bi-twitter-x"></i></a>
+                  <a href=""><i class="bi bi-facebook"></i></a>
+                  <a href=""><i class="bi bi-instagram"></i></a>
+                  <a href=""><i class="bi bi-linkedin"></i></a>
+                </div>
+              </div>
+            </div>
+          </div><!-- End Team Member -->
+
+          <div class="col-lg-4" data-aos="fade-up" data-aos-delay="200">
+            <div class="member">
+              <img src="assets/img/chefs/chefs-2.jpg" class="img-fluid" alt="">
+              <div class="member-info">
+                <div class="member-info-content">
+                  <h4>Sarah Jhonson</h4>
+                  <span>Patissier</span>
+                </div>
+                <div class="social">
+                  <a href=""><i class="bi bi-twitter-x"></i></a>
+                  <a href=""><i class="bi bi-facebook"></i></a>
+                  <a href=""><i class="bi bi-instagram"></i></a>
+                  <a href=""><i class="bi bi-linkedin"></i></a>
+                </div>
+              </div>
+            </div>
+          </div><!-- End Team Member -->
+
+          <div class="col-lg-4" data-aos="fade-up" data-aos-delay="300">
+            <div class="member">
+              <img src="assets/img/chefs/chefs-3.jpg" class="img-fluid" alt="">
+              <div class="member-info">
+                <div class="member-info-content">
+                  <h4>William Anderson</h4>
+                  <span>Cook</span>
+                </div>
+                <div class="social">
+                  <a href=""><i class="bi bi-twitter-x"></i></a>
+                  <a href=""><i class="bi bi-facebook"></i></a>
+                  <a href=""><i class="bi bi-instagram"></i></a>
+                  <a href=""><i class="bi bi-linkedin"></i></a>
+                </div>
+              </div>
+            </div>
+          </div><!-- End Team Member -->
+
+        </div>
+
+      </div>
+
+    </section><!-- /Chefs Section -->
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact section">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Contact</h2>
+        <p>Contact Us</p>
+      </div><!-- End Section Title -->
+
+      <div class="mb-5" data-aos="fade-up" data-aos-delay="200">
+        <iframe style="border:0; width: 100%; height: 400px;" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d48389.78314118045!2d-74.006138!3d40.710059!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25a22a3bda30d%3A0xb89d1fe6bc499443!2sDowntown%20Conference%20Center!5e0!3m2!1sen!2sus!4v1676961268712!5m2!1sen!2sus" frameborder="0" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div><!-- End Google Maps -->
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="row gy-4">
+
+          <div class="col-lg-4">
+            <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="300">
+              <i class="bi bi-geo-alt flex-shrink-0"></i>
+              <div>
+                <h3>Location</h3>
+                <p>A108 Adam Street, New York, NY 535022</p>
+              </div>
+            </div><!-- End Info Item -->
+
+            <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="400">
+              <i class="bi bi-telephone flex-shrink-0"></i>
+              <div>
+                <h3>Open Hours</h3>
+                <p>Monday-Saturday:<br>11:00 AM - 2300 PM</p>
+              </div>
+            </div><!-- End Info Item -->
+
+            <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="400">
+              <i class="bi bi-telephone flex-shrink-0"></i>
+              <div>
+                <h3>Call Us</h3>
+                <p>+1 5589 55488 55</p>
+              </div>
+            </div><!-- End Info Item -->
+
+            <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="500">
+              <i class="bi bi-envelope flex-shrink-0"></i>
+              <div>
+                <h3>Email Us</h3>
+                <p>info@example.com</p>
+              </div>
+            </div><!-- End Info Item -->
+
+          </div>
+
+          <div class="col-lg-8">
+            <form action="forms/contact.php" method="post" class="php-email-form" data-aos="fade-up" data-aos-delay="200">
+              <div class="row gy-4">
+
+                <div class="col-md-6">
+                  <input type="text" name="name" class="form-control" placeholder="Your Name" required="">
+                </div>
+
+                <div class="col-md-6 ">
+                  <input type="email" class="form-control" name="email" placeholder="Your Email" required="">
+                </div>
+
+                <div class="col-md-12">
+                  <input type="text" class="form-control" name="subject" placeholder="Subject" required="">
+                </div>
+
+                <div class="col-md-12">
+                  <textarea class="form-control" name="message" rows="6" placeholder="Message" required=""></textarea>
+                </div>
+
+                <div class="col-md-12 text-center">
+                  <div class="loading">Loading</div>
+                  <div class="error-message"></div>
+                  <div class="sent-message">Your message has been sent. Thank you!</div>
+
+                  <button type="submit">Send Message</button>
+                </div>
+
+              </div>
+            </form>
+          </div><!-- End Contact Form -->
+
+        </div>
+
+      </div>
+
+    </section><!-- /Contact Section -->
+
+  </main>
+
+  <footer id="footer" class="footer">
+
+    <div class="container footer-top">
+      <div class="row gy-4">
+        <div class="col-lg-4 col-md-6 footer-about">
+          <a href="index.html" class="logo d-flex align-items-center">
+            <span class="sitename">Restaurantly</span>
+          </a>
+          <div class="footer-contact pt-3">
+            <p>A108 Adam Street</p>
+            <p>New York, NY 535022</p>
+            <p class="mt-3"><strong>Phone:</strong> <span>+1 5589 55488 55</span></p>
+            <p><strong>Email:</strong> <span>info@example.com</span></p>
+          </div>
+          <div class="social-links d-flex mt-4">
+            <a href=""><i class="bi bi-twitter-x"></i></a>
+            <a href=""><i class="bi bi-facebook"></i></a>
+            <a href=""><i class="bi bi-instagram"></i></a>
+            <a href=""><i class="bi bi-linkedin"></i></a>
+          </div>
+        </div>
+
+        <div class="col-lg-2 col-md-3 footer-links">
+          <h4>Useful Links</h4>
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About us</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Terms of service</a></li>
+            <li><a href="#">Privacy policy</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-2 col-md-3 footer-links">
+          <h4>Our Services</h4>
+          <ul>
+            <li><a href="#">Web Design</a></li>
+            <li><a href="#">Web Development</a></li>
+            <li><a href="#">Product Management</a></li>
+            <li><a href="#">Marketing</a></li>
+            <li><a href="#">Graphic Design</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-4 col-md-12 footer-newsletter">
+          <h4>Our Newsletter</h4>
+          <p>Subscribe to our newsletter and receive the latest news about our products and services!</p>
+          <form action="forms/newsletter.php" method="post" class="php-email-form">
+            <div class="newsletter-form"><input type="email" name="email"><input type="submit" value="Subscribe"></div>
+            <div class="loading">Loading</div>
+            <div class="error-message"></div>
+            <div class="sent-message">Your subscription request has been sent. Thank you!</div>
+          </form>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="container copyright text-center mt-4">
+      <p>© <span>Copyright</span> <strong class="px-1 sitename">Restaurantly</strong> <span>All Rights Reserved</span></p>
+      <div class="credits">
+        <!-- All the links in the footer should remain intact. -->
+        <!-- You can delete the links only if you've purchased the pro version. -->
+        <!-- Licensing information: https://bootstrapmade.com/license/ -->
+        <!-- Purchase the pro version with working PHP/AJAX contact form: [buy-url] -->
+        Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+      </div>
+    </div>
+
+  </footer>
+
+  <!-- Scroll Top -->
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Preloader -->
+  <div id="preloader"></div>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+
+  <!-- Main JS File -->
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/script.js"></script>
+
+</body>
+
+</html>
