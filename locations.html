@@ -142,50 +142,110 @@
       /* Larger icon size for mobile */
     }
 
-    .page-title{
-      height: 50px!important;
+    .page-title {
+      height: 50px !important;
     }
-    .page-title h1{
+
+    .page-title h1 {
       display: none;
     }
-    .page-title p{
+
+    .page-title p {
       display: none;
+    }
+
+    .why-us .card-item {
+      padding: 20px 30px;
+      border-radius: 30px;
+      margin: 5px;
     }
   }
 
-.member {
-  border-radius: 15px; 
-  box-shadow: 4px 4px 7px rgb(237, 232, 232); 
-  margin: 15px; 
-  overflow: hidden; 
-}
+  .member {
+    border-radius: 15px;
+    box-shadow: 4px 4px 7px rgb(237, 232, 232);
+    margin: 15px;
+    overflow: hidden;
+  }
 
-.member img {
-  border-radius: 15px; 
-  object-fit: cover; 
-}
-.header .btn-book-a-table, .header .btn-book-a-table:focus{
-display: none!important;
-}
+  .member img {
+    border-radius: 15px;
+    object-fit: cover;
+  }
 
-.btn-book-a-table {
-  display: inline-block;
-  font-size: 18px; /* Make the font larger */
-  padding: 15px 30px; /* Increase padding to make the button bigger */
-  background-color: transparent; /* Transparent background */
-  color: #ffbb00; /* Text color */
-  border: 2px solid #ffbb00; /* Border same color as text */
-  border-radius: 25px; /* Add border radius for rounded corners */
-  text-align: center;
-  text-decoration: none;
-  transition: all 0.3s ease; /* Add smooth transition on hover */
-}
+  .header .btn-book-a-table,
+  .header .btn-book-a-table:focus {
+    display: none !important;
+  }
 
-.btn-book-a-table:hover {
-  background-color: #ffbb00; /* On hover, background color changes to the same as text */
-  color: white; /* Change text color to white on hover */
-}
+  .btn-book-a-table {
+    display: inline-block;
+    font-size: 18px;
+    /* Make the font larger */
+    padding: 15px 30px;
+    /* Increase padding to make the button bigger */
+    background-color: transparent;
+    /* Transparent background */
+    color: #ffbb00;
+    /* Text color */
+    border: 2px solid #CDA45D;
+    /* Border same color as text */
+    border-radius: 25px;
+    /* Add border radius for rounded corners */
+    text-align: center;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    /* Add smooth transition on hover */
+  }
 
+  .btn-book-a-table:hover {
+    background-color: #CDA45D;
+    /* On hover, background color changes to the same as text */
+    color: white;
+    /* Change text color to white on hover */
+  }
+
+  input[type="date"] {
+    background-color: #0e0d0d;
+    border: 1px solid #CDA45D;
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 16px;
+    width: 100%;
+    transition: border-color 0.5s ease, box-shadow 0.5s ease;
+    color: #CDA45D;
+    /* Ensures text is visible on dark background */
+  }
+
+  input[type="date"]:focus {
+    border-color: #CDA45D;
+    outline: none;
+    box-shadow: 0 0 10px rgba(228, 228, 4, 0.919);
+    /* Adds glowing effect on focus */
+  }
+
+  input[type="date"]:hover {
+    border-color: #CDA45D;
+    /* Changes border color when hovered */
+    box-shadow: 0 0 5px rgba(206, 165, 16, 0.4);
+    /* Subtle shadow effect on hover */
+  }
+
+  input[type="date"]::-webkit-calendar-picker-indicator {
+    background-color: #CDA45D;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+  }
+
+  /* Optional: Darken the indicator slightly when hovering */
+  input[type="date"]:hover::-webkit-calendar-picker-indicator {
+    background-color: #CDA45D;
+  }
+
+  .section-title h2::after {
+    /* margin-top: 10px; */
+    background: none;
+  }
 </style>
 
 <body class="index-page">
@@ -272,21 +332,44 @@ display: none!important;
       </div>
     </div><!-- End Page Title -->
 
-    <section id="why-us" class="why-us section">
+    <section id="why-us" class="why-us p-0 section">
 
       <!-- Section Title -->
-      <div class="container section-title "  data-aos="fade-up">
-        
+      <div class="container section-title p-5" data-aos="fade-up">
+
         <!-- <h2 class="text-center" >Back</h2> -->
         <p class="text-center">Check Availablity</p>
+        <div class="container position-relative">
+          <h1 class="text-center fs-6">MVP-Colony Vizag</h1>
+        </div>
 
+        <!-- <h2 class="text-center">Visakhapatnam</h2> -->
         <form action="forms/book-a-table.php" method="post" role="form" class="php-email-form">
-          <div class="row gy-4 justify-content-center mt-3" >
-            <div class="col-lg-4 col-md-6">
+          <div class="row gy-4 justify-content-center mt-3">
+            <div class="col-lg-4 col-md-6 " style="width: 50%;">
               <input type="date" name="date" class="form-control" id="date" placeholder="Date" required="">
             </div>
           </div>
         </form>
+
+
+
+        <script>
+          document.addEventListener("DOMContentLoaded", function () {
+            // Get today's date
+            const today = new Date();
+
+            // Add 1 day to today's date to block tomorrow and all earlier dates
+            today.setDate(today.getDate() + 1);
+
+            // Format the date in YYYY-MM-DD format
+            const tomorrow = today.toISOString().split('T')[0];
+
+            // Set the min attribute of the date input to tomorrow
+            document.getElementById('date').setAttribute('min', tomorrow);
+          });
+        </script>
+
       </div><!-- End Section Title -->
 
       <div class="container">
@@ -295,11 +378,11 @@ display: none!important;
 
           <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
             <div class="card-item">
-                <!-- <img class="slider-bg" src="assets/img/events-bg.jpg" alt="" data-aos="fade-in"> -->
-                <span>01 MVP Colony</span>
-                <div class="container">
-                    <div class="swiper init-swiper" data-aos="fade-up" data-aos-delay="100">
-                        <script type="application/json" class="swiper-config">
+              <!-- <img class="slider-bg" src="assets/img/events-bg.jpg" alt="" data-aos="fade-in"> -->
+              <span class="text-center mb-3">Premium Screen</span>
+              <div class="container">
+                <div class="swiper init-swiper" data-aos="fade-up" data-aos-delay="100">
+                  <script type="application/json" class="swiper-config">
                             {
                                 "loop": true,
                                 "speed": 600,
@@ -314,71 +397,86 @@ display: none!important;
                                 }
                             }
                         </script>
-                        <div class="swiper-wrapper">
-                            <!-- Mini Theatre with Friends and Family -->
-                            <div class="swiper-slide">
-                                <div class="row gy-4 event-item">
-                                    <div class="col-lg-12">
-                                        <img src="assets/img/hero-bg5.png" class="img-fluid" alt="Mini Theatre with Friends and Family">
-                                    </div>
-                                </div>
-                            </div><!-- End Mini Theatre -->
-        
-                            <!-- Birthday Events -->
-                            <div class="swiper-slide">
-                                <div class="row gy-4 event-item">
-                                    <div class="col-lg-12">
-                                        <img src="assets/img/hero-bg5.png" class="img-fluid" alt="Birthday Events">
-                                    </div>
-                                </div>
-                            </div><!-- End Birthday Parties -->
-        
-                            <!-- Mom-to-Be Events -->
-                            <div class="swiper-slide">
-                                <div class="row gy-4 event-item">
-                                    <div class="col-lg-12">
-                                        <img src="assets/img/hero-bg5.png" class="img-fluid" alt="Mom-to-Be Events">
-                                    </div>
-                                </div>
-                            </div><!-- End Mom-to-Be Events -->
-        
-                            <!-- Small Private Parties -->
-                            <div class="swiper-slide">
-                                <div class="row gy-4 event-item">
-                                    <div class="col-lg-12">
-                                        <img src="assets/img/hero-bg5.png" class="img-fluid" alt="Small Private Parties">
-                                    </div>
-                                </div>
-                            </div><!-- End Small Private Parties -->
-        
-                            <!-- More event types can be added here in the future -->
+                  <div class="swiper-wrapper">
+                    <!-- Mini Theatre with Friends and Family -->
+                    <div class="swiper-slide">
+                      <div class="row gy-4 event-item">
+                        <div class="col-lg-12">
+                          <img src="assets/img/hero-bg5.png" class="img-fluid"
+                            alt="Mini Theatre with Friends and Family">
                         </div>
-                        <div class="swiper-pagination"></div>
-                    </div>
+                      </div>
+                    </div><!-- End Mini Theatre -->
+
+                    <!-- Birthday Events -->
+                    <div class="swiper-slide">
+                      <div class="row gy-4 event-item">
+                        <div class="col-lg-12">
+                          <img src="assets/img/hero-bg5.png" class="img-fluid" alt="Birthday Events">
+                        </div>
+                      </div>
+                    </div><!-- End Birthday Parties -->
+
+                    <!-- Mom-to-Be Events -->
+                    <div class="swiper-slide">
+                      <div class="row gy-4 event-item">
+                        <div class="col-lg-12">
+                          <img src="assets/img/hero-bg5.png" class="img-fluid" alt="Mom-to-Be Events">
+                        </div>
+                      </div>
+                    </div><!-- End Mom-to-Be Events -->
+
+                    <!-- Small Private Parties -->
+                    <div class="swiper-slide">
+                      <div class="row gy-4 event-item">
+                        <div class="col-lg-12">
+                          <img src="assets/img/hero-bg5.png" class="img-fluid" alt="Small Private Parties">
+                        </div>
+                      </div>
+                    </div><!-- End Small Private Parties -->
+
+                    <!-- More event types can be added here in the future -->
+                  </div>
+                  <div class="swiper-pagination"></div>
                 </div>
-                <h4><a href="" class="stretched-link">Platinum Theatre</a></h4>                
-                <!-- Platinum Theatre Section Below the Images -->
-                <div class="platinum-theatre-info">
-                  <h5>Platinum Theatre</h5>
-                  
-                  <div><i class="bi bi-calendar-check"></i> <strong>Slots Available:</strong> 5</div>
-                  <div><i class="bi bi-cash"></i> <strong>Price:</strong> ₹2799 for 6 people (including taxes)</div>
-                  <div><i class="bi bi-check2-circle"></i> <strong>Max People:</strong> 12</div>
-                  <div><i class="bi bi-check2-circle"></i> <strong>Decoration:</strong> ₹749</div>
-                  <div><i class="bi bi-check2-circle"></i> <strong>Extra Person:</strong> ₹400 per person</div>
-                  <div><i class="bi bi-check2-circle"></i> <strong class="small-text">Optional Add-ons:</strong> Cakes, Photography</div>
-                  <div><i class="bi bi-check2-circle"></i> <strong class="small-text">Cancellation Policy:</strong> Refund eligible if cancelled 72 hours before the slot time</div>
+              </div>
+              <h4><a href="" >Platinum Theatre</a></h4>
+              <!-- Platinum Theatre Section Below the Images -->
+              <div class="platinum-theatre-info">
+                <div><i class="bi bi-calendar-check"></i> <strong>Slots Available:</strong> 5</div>
+                <div><i class="bi bi-cash"></i> <strong>Price:</strong> ₹2799 for 6 people (including taxes)</div>
+                <div><i class="bi bi-check2-circle"></i> <strong>Max People:</strong> 12</div>
+                <div><i class="bi bi-check2-circle"></i> <strong>Decoration:</strong> ₹749</div>
+                <div><i class="bi bi-check2-circle"></i> <strong>Extra Person:</strong> ₹400 per person</div>
+                <div><i class="bi bi-check2-circle"></i> <strong class="small-text">Optional Add-ons:</strong> Cakes,
+                  Photography</div>
+                <div><i class="bi bi-check2-circle"></i> <strong class="small-text">Cancellation Policy:</strong> Refund
+                  eligible if cancelled 72 hours before the slot time</div>
+
+                <h5 class="mt-2">Choose your slot</h5>
+
+                <div class="form-group d-flex">
+                  <select class="form-control mr-2" id="time-slot">
+                      <option value="9:30 AM - 12:30 PM">9:30 AM - 12:30 PM</option>
+                      <option value="1:00 PM - 4:00 PM">1:00 PM - 4:00 PM</option>
+                      <option value="4:30 PM - 6:00 PM">4:30 PM - 6:00 PM</option>
+                      <option value="6:30 PM - 9:30 PM">6:30 PM - 9:30 PM</option>
+                      <option value="10:00 PM - 1:00 AM">10:00 PM - 1:00 AM</option>
+                  </select>
               </div>
               
+              </div>
+
             </div>
-        </div><!-- Card Item -->
-        
+          </div><!-- Card Item -->
+
 
           <div class="col-lg-4" data-aos="fade-up" data-aos-delay="200">
             <div class="card-item">
               <span>02</span>
               <h4><a href="" class="stretched-link">Customization</a></h4>
-              <p>Your event is unique, and so are our services. We work closely with you to understand your vision and bring it to life with personalized touches that reflect your style.</p>
+              <p>Your event is unique, and so are our services. We work closely with you to understand your vision and
+                bring it to life with personalized touches that reflect your style.</p>
             </div>
           </div><!-- Card Item -->
 
@@ -386,7 +484,9 @@ display: none!important;
             <div class="card-item">
               <span>03</span>
               <h4><a href="" class="stretched-link">Mini Theater Experience</a></h4>
-              <p>Immerse yourself in our bespoke mini theater setups, perfect for private screenings, movie nights, or gaming parties. We provide state-of-the-art equipment and cozy seating arrangements to elevate your entertainment experience.</p>
+              <p>Immerse yourself in our bespoke mini theater setups, perfect for private screenings, movie nights, or
+                gaming parties. We provide state-of-the-art equipment and cozy seating arrangements to elevate your
+                entertainment experience.</p>
             </div>
           </div><!-- Card Item -->
         </div>
@@ -401,7 +501,7 @@ display: none!important;
   <footer id="footer" class="footer">
     <div class="container footer-top">
       <div class="row gy-4">
-        
+
         <!-- About Section -->
         <div class="col-lg-4 col-md-6 footer-about">
           <a href="index.html" class="logo d-flex align-items-center">
@@ -422,21 +522,23 @@ display: none!important;
         </div>
       </div>
     </div>
-  
+
     <!-- Copyright Section -->
     <div class="container copyright text-center mt-4">
-      <p>© <span>Copyright</span> <strong class="px-1 sitename">Party-Perfkt</strong> <span>All Rights Reserved</span></p>
+      <p>© <span>Copyright</span> <strong class="px-1 sitename">Party-Perfkt</strong> <span>All Rights Reserved</span>
+      </p>
       <div class="credits">
         Designed by <a href="#">Team Party-Perfkt</a>
       </div>
     </div>
   </footer>
-  
-  <a href="https://wa.me/1234567890?text=Hello%20I%20need%20help!" id="whatsapp-link" class="whatsapp-link d-flex align-items-center justify-content-start" target="_blank">
+
+  <a href="https://wa.me/1234567890?text=Hello%20I%20need%20help!" id="whatsapp-link"
+    class="whatsapp-link d-flex align-items-center justify-content-start" target="_blank">
     <i class="bi bi-whatsapp"></i>
     <span class="whatsapp-text">Book through WhatsApp</span>
-</a>
-  
+  </a>
+
 
   <!-- Scroll Top -->
   <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i
