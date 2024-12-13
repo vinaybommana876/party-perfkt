@@ -33,6 +33,7 @@
   <!-- my addons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
 
 
 </head>
@@ -185,7 +186,6 @@ display: none!important;
   color: white; /* Change text color to white on hover */
 }
 
-
 </style>
 
 <body class="index-page">
@@ -245,7 +245,7 @@ display: none!important;
         </nav>
 
 
-        <a class="btn-book-a-table d-block d-xl-block" href="locations.html">Book Now</a>
+        <a class="btn-book-a-table d-block d-xl-block" href="#book-a-table">Book Now</a>
 
       </div>
 
@@ -272,82 +272,128 @@ display: none!important;
       </div>
     </div><!-- End Page Title -->
 
-    <section id="chefs" class="chefs section">
+    <section id="why-us" class="why-us section">
 
       <!-- Section Title -->
-      <div class="container section-title " data-aos="fade-up">
-        <h2>Our Locations</h2>
-        <p>Book Now</p>
+      <div class="container section-title "  data-aos="fade-up">
+        
+        <!-- <h2 class="text-center" >Back</h2> -->
+        <p class="text-center">Check Availablity</p>
+
+        <form action="forms/book-a-table.php" method="post" role="form" class="php-email-form">
+          <div class="row gy-4 justify-content-center mt-3" >
+            <div class="col-lg-4 col-md-6">
+              <input type="date" name="date" class="form-control" id="date" placeholder="Date" required="">
+            </div>
+          </div>
+        </form>
       </div><!-- End Section Title -->
 
       <div class="container">
 
         <div class="row gy-4">
 
-          <div class="col-lg-4 mb-3" data-aos="fade-up" data-aos-delay="100">
-            <div class="member">
-              <img src="assets/img/chefs/chefs-1.jpg" class="img-fluid" alt="Visakhapatnam Location">
-              <div class="member-info">
-                <div class="member-info-content p-3">
-                  <h3 class="fw-bold" >Visakhapatnam</h3>
-                  <span>Available Rooms: 10</span>
-                  <p>Located by the beach with premium facilities for your stay. Book now and enjoy an unforgettable
-                    experience!</p>
-                  <a class="btn-book-a-table d-block d-xl-block" href="locations.html">Book Now</a>
+          <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
+            <div class="card-item">
+                <!-- <img class="slider-bg" src="assets/img/events-bg.jpg" alt="" data-aos="fade-in"> -->
+                <span>01 MVP Colony</span>
+                <div class="container">
+                    <div class="swiper init-swiper" data-aos="fade-up" data-aos-delay="100">
+                        <script type="application/json" class="swiper-config">
+                            {
+                                "loop": true,
+                                "speed": 600,
+                                "autoplay": {
+                                    "delay": 5000
+                                },
+                                "slidesPerView": "auto",
+                                "pagination": {
+                                    "el": ".swiper-pagination",
+                                    "type": "bullets",
+                                    "clickable": true
+                                }
+                            }
+                        </script>
+                        <div class="swiper-wrapper">
+                            <!-- Mini Theatre with Friends and Family -->
+                            <div class="swiper-slide">
+                                <div class="row gy-4 event-item">
+                                    <div class="col-lg-12">
+                                        <img src="assets/img/hero-bg5.png" class="img-fluid" alt="Mini Theatre with Friends and Family">
+                                    </div>
+                                </div>
+                            </div><!-- End Mini Theatre -->
+        
+                            <!-- Birthday Events -->
+                            <div class="swiper-slide">
+                                <div class="row gy-4 event-item">
+                                    <div class="col-lg-12">
+                                        <img src="assets/img/hero-bg5.png" class="img-fluid" alt="Birthday Events">
+                                    </div>
+                                </div>
+                            </div><!-- End Birthday Parties -->
+        
+                            <!-- Mom-to-Be Events -->
+                            <div class="swiper-slide">
+                                <div class="row gy-4 event-item">
+                                    <div class="col-lg-12">
+                                        <img src="assets/img/hero-bg5.png" class="img-fluid" alt="Mom-to-Be Events">
+                                    </div>
+                                </div>
+                            </div><!-- End Mom-to-Be Events -->
+        
+                            <!-- Small Private Parties -->
+                            <div class="swiper-slide">
+                                <div class="row gy-4 event-item">
+                                    <div class="col-lg-12">
+                                        <img src="assets/img/hero-bg5.png" class="img-fluid" alt="Small Private Parties">
+                                    </div>
+                                </div>
+                            </div><!-- End Small Private Parties -->
+        
+                            <!-- More event types can be added here in the future -->
+                        </div>
+                        <div class="swiper-pagination"></div>
+                    </div>
                 </div>
+                <h4><a href="" class="stretched-link">Platinum Theatre</a></h4>                
+                <!-- Platinum Theatre Section Below the Images -->
+                <div class="platinum-theatre-info">
+                  <h5>Platinum Theatre</h5>
+                  
+                  <div><i class="bi bi-calendar-check"></i> <strong>Slots Available:</strong> 5</div>
+                  <div><i class="bi bi-cash"></i> <strong>Price:</strong> ₹2799 for 6 people (including taxes)</div>
+                  <div><i class="bi bi-check2-circle"></i> <strong>Max People:</strong> 12</div>
+                  <div><i class="bi bi-check2-circle"></i> <strong>Decoration:</strong> ₹749</div>
+                  <div><i class="bi bi-check2-circle"></i> <strong>Extra Person:</strong> ₹400 per person</div>
+                  <div><i class="bi bi-check2-circle"></i> <strong class="small-text">Optional Add-ons:</strong> Cakes, Photography</div>
+                  <div><i class="bi bi-check2-circle"></i> <strong class="small-text">Cancellation Policy:</strong> Refund eligible if cancelled 72 hours before the slot time</div>
               </div>
+              
             </div>
-            <h3 class="text-center location-heading">
-              <i class="fas fa-map-marker-alt location-icon"></i> Vizianagaram
-            </h3>
-            
-          </div><!-- End Location -->
+        </div><!-- Card Item -->
+        
 
-          <div class="col-lg-4 mb-3" data-aos="fade-up" data-aos-delay="300">
-            <div class="member">
-              <img src="assets/img/chefs/chefs-1.jpg" class="img-fluid" alt="Another Location">
-              <div class="member-info">
-                <div class="member-info-content p-3">
-                  <h3 class="fw-bold">Another Location</h3>
-                  <span>Available Rooms: 5</span>
-                  <p>Conveniently located in the city center, ideal for business and leisure stays. Secure your room
-                    today!</p>
-                  <a class="btn-book-a-table d-block d-xl-block" href="locations.html">Book Now</a>
-                </div>
-              </div>
+          <div class="col-lg-4" data-aos="fade-up" data-aos-delay="200">
+            <div class="card-item">
+              <span>02</span>
+              <h4><a href="" class="stretched-link">Customization</a></h4>
+              <p>Your event is unique, and so are our services. We work closely with you to understand your vision and bring it to life with personalized touches that reflect your style.</p>
             </div>
-            
-            <h3 class="text-center location-heading">
-              <i class="fas fa-map-marker-alt location-icon"></i> Vizianagaram
-            </h3>
-            
-          </div><!-- End Location -->
-          <div class="col-lg-4 mb-3" data-aos="fade-up" data-aos-delay="200">
-            <div class="member">
-              <img src="assets/img/chefs/chefs-1.jpg" class="img-fluid" alt="Vizianagaram Location">
-              <div class="member-info">
-                <div class="member-info-content p-3">
-                  <h3 class="fw-bold">Vizianagaram</h3>
-                  <span>Coming Soon</span>
-                  <p>This location is opening soon. Stay tuned for more information!</p>
-                  <a class="btn-book-a-table d-block d-xl-block" disabled href="#">Coming Soon</a>
-                </div>
-              </div>
+          </div><!-- Card Item -->
+
+          <div class="col-lg-4" data-aos="fade-up" data-aos-delay="300">
+            <div class="card-item">
+              <span>03</span>
+              <h4><a href="" class="stretched-link">Mini Theater Experience</a></h4>
+              <p>Immerse yourself in our bespoke mini theater setups, perfect for private screenings, movie nights, or gaming parties. We provide state-of-the-art equipment and cozy seating arrangements to elevate your entertainment experience.</p>
             </div>
-            
-            <h3 class="text-center location-heading">
-              <i class="fas fa-map-marker-alt location-icon"></i> Vizianagaram
-            </h3>
-            
-          </div><!-- End Location -->
-
-         
-
+          </div><!-- Card Item -->
         </div>
 
       </div>
 
-    </section>
+    </section><!-- /Why Us Section -->
 
 
   </main>
