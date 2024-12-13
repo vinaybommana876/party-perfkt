@@ -1288,7 +1288,7 @@ section,
   }
 
   .specials .nav-link.active {
-    color: var(--accent-color);
+    color: var(--contrast-color);
     background: var(--accent-color);
   }
 }
