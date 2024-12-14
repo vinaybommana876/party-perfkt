@@ -162,10 +162,11 @@
   }
 
   .why-us .card-item {
-      /* padding: 20px 30px; */
-      border-radius: 30px;
-      margin: 5px;
-    }
+    /* padding: 20px 30px; */
+    border-radius: 30px;
+    margin: 5px;
+  }
+
   .member {
     border-radius: 15px;
     box-shadow: 4px 4px 7px rgb(237, 232, 232);
@@ -251,72 +252,79 @@
     /* margin-top: 10px; */
     background: none;
   }
+
   .form-group {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-between;
-            margin-bottom: 20px;
-        }
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 20px;
+  }
 
-        .form-group button {
-            flex: 0 1 48%;  /* Default: each button takes up approximately 48% of the width */
-            margin-bottom: 10px;
-            padding: 10px;
-            font-size: 14px;
-            background-color: #3e3d3b;
-            color: white;
-            border: 1px #CDA45D;
-            border-radius: 20px;
-            cursor: pointer;
-            transition: background-color 0.3s ease;
-        }
+  .form-group button {
+    flex: 0 1 48%;
+    /* Default: each button takes up approximately 48% of the width */
+    margin-bottom: 10px;
+    padding: 10px;
+    font-size: 14px;
+    background-color: #3e3d3b;
+    color: white;
+    border: 1px #CDA45D;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
 
-        /* When a button is selected */
-        .form-group button.selected {
-            background-color: #CDA45D; /* Green for selected */
-        }
+  /* When a button is selected */
+  .form-group button.selected {
+    background-color: #CDA45D;
+    /* Green for selected */
+  }
 
-        /* Button hover effect */
-        .form-group button:hover {
-            background-color: #CDA45D;
-        }
+  /* Button hover effect */
+  .form-group button:hover {
+    background-color: #CDA45D;
+  }
 
-        /* Disabled (unavailable) button */
-        .form-group button.disabled {
-            background-color: #6c757d; /* Gray for disabled */
-            cursor: not-allowed;
-            text-decoration: line-through; /* Strike-through effect */
-        }
+  /* Disabled (unavailable) button */
+  .form-group button.disabled {
+    background-color: #6c757d;
+    /* Gray for disabled */
+    cursor: not-allowed;
+    text-decoration: line-through;
+    /* Strike-through effect */
+  }
 
-        /* Proceed button styles */
-        .form-group #proceed {
-            display: none; /* Hidden by default */
-            padding: 10px;
-            font-size: 20px;
-            background-color: #282929;
-            color: rgb(210, 160, 8);
-            border: none;
-            border-radius: 20px;
-            cursor: not-allowed;
-            width: 100%;
-            margin-top: 10px;
-            flex: none!important;
-        }
+  /* Proceed button styles */
+  .form-group #proceed {
+    display: none;
+    /* Hidden by default */
+    padding: 10px;
+    font-size: 20px;
+    background-color: #282929;
+    color: rgb(210, 160, 8);
+    border: none;
+    border-radius: 20px;
+    cursor: not-allowed;
+    width: 100%;
+    margin-top: 10px;
+    flex: none !important;
+  }
 
-        /* Proceed button enabled state */
-        .form-group #proceed.enabled {
-            cursor: pointer;
-            color: white;
-            background-color: #CDA45D; /* Green when enabled */
-        }
+  /* Proceed button enabled state */
+  .form-group #proceed.enabled {
+    cursor: pointer;
+    color: white;
+    background-color: #CDA45D;
+    /* Green when enabled */
+  }
 
-        .why-us .card-item:hover .form-group #proceed {
-          background-color: #282929;
-        }
+  .why-us .card-item:hover .form-group #proceed {
+    background-color: #282929;
+  }
 
-        .why-us .card-item:hover {
-          background-color: #504d4d;
-        }
+  .why-us .card-item:hover {
+    background-color: #504d4d;
+  }
 </style>
 
 <body class="index-page">
@@ -450,7 +458,7 @@
           <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
             <div class="card-item">
               <!-- <img class="slider-bg" src="assets/img/events-bg.jpg" alt="" data-aos="fade-in"> -->
-              <span class="text-center mb-3">Premium Screen</span>
+              <span class="text-center mb-3">Premium Screen-1</span>
               <div class="container">
                 <div class="swiper init-swiper" data-aos="fade-up" data-aos-delay="100">
                   <script type="application/json" class="swiper-config">
@@ -531,110 +539,19 @@
                   <button type="button" id="btn2" value="1:00 PM - 4:00 PM">1:00 PM - 4:00 PM</button>
                   <button type="button" id="btn3" value="4:30 PM - 6:00 PM">4:30 PM - 6:00 PM</button>
                   <button type="button" id="btn4" value="6:30 PM - 9:30 PM">6:30 PM - 9:30 PM</button>
-                  <button type="button" class="text-center" id="btn5" value="10:00 PM - 1:00 AM">10:00 PM - 1:00 AM</button>
-              </div>
-          
-              <div class="form-group">
-                <button type="submit" class="d-block text-center" id="proceed" disabled>Proceed</button>
-            </div>
-        
-            <div class="form-group">
-                <span class="error" style="font-size: 15px; color: red;" id="error-message"></span>
-            </div>
-          
-            <script>
-              // Array of unavailable time slots (these will be disabled and struck through)
-              const unavailableSlots = [
-                  "1:00 PM - 4:00 PM",  // Example: Disabled slot
-                  "10:00 PM - 1:00 AM"  // Example: Disabled slot
-              ];
-      
-              // Store the selected button value
-              let selectedTimeSlot = null;
-              let selectedDate = null;
-      
-              // Get all the buttons
-              const buttons = document.querySelectorAll('.form-group button[type="button"]');
-              const datePicker = document.getElementById('date-picker');
-              const proceedButton = document.getElementById('proceed');
-              const errorMessage = document.getElementById('error-message');
-      
-              // Disable and strike-through unavailable time slots
-              buttons.forEach(button => {
-                  if (unavailableSlots.includes(button.value)) {
-                      button.classList.add('disabled'); // Add 'disabled' class to button
-                      button.disabled = true;           // Disable the button functionality
-                  }
-              });
-      
-              // Add event listeners to buttons
-              buttons.forEach(button => {
-                  button.addEventListener('click', function () {
-                      if (!button.classList.contains('disabled')) {
-                          // Toggle the 'selected' class to mark the button
-                          buttons.forEach(b => b.classList.remove('selected')); // Remove 'selected' class from all buttons
-                          button.classList.add('selected'); // Add 'selected' class to the clicked button
-      
-                          // Save the selected time slot
-                          selectedTimeSlot = button.value;
-      
-                          // Enable the Proceed button and change its style
-                          proceedButton.disabled = false;
-                          proceedButton.classList.add('enabled');
-      
-                          // Reset error message
-                          errorMessage.textContent = "";
-                      }
-                  });
-              });
-      
-              // Add event listener to date picker
-              datePicker.addEventListener('change', function () {
-                  selectedDate = datePicker.value;
-      
-                  // Reset error message if a date is selected
-                  errorMessage.textContent = "";
-              });
-      
-              // Function to get the current date
-              function getCurrentDate() {
-                  return new Date().toLocaleDateString();
-              }
-      
-              // Function to get the selected time slot
-              function getSelectedTimeSlot() {
-                  return selectedTimeSlot;
-              }
-      
-              // Function to build the URL with selected time slot and date
-              function buildRedirectUrl(timeSlot, date) {
-                  return `nextpage.html?time=${encodeURIComponent(timeSlot)}&date=${encodeURIComponent(date)}`;
-              }
-      
-              // Add event listener to the Proceed button
-              proceedButton.addEventListener('click', function () {
-                  // Get the selected time slot and current date
-                  const timeSlot = getSelectedTimeSlot();
-                  const date = selectedDate || getCurrentDate(); // Use the selected date, or fallback to today's date if not selected
-      
-                  // Validation: Check if a date and time slot are selected
-                  if (!selectedDate) {
-                      errorMessage.textContent = "Please select a date.";
-                      return;
-                  }
-      
-                  if (!timeSlot) {
-                      errorMessage.textContent = "Please select a time slot.";
-                      return;
-                  }
-      
-                  // Build the URL with time slot and date
-                  const url = buildRedirectUrl(timeSlot, date);
-      
-                  // Redirect to the next page
-                  window.location.href = url; // Redirect to the next page
-              });
-          </script>
+                  <button type="button" class="text-center" id="btn5" value="10:00 PM - 1:00 AM">10:00 PM - 1:00
+                    AM</button>
+                </div>
+
+                <div class="form-group">
+                  <button type="submit" class="d-block text-center" id="proceed" disabled>Proceed</button>
+                </div>
+
+                <div class="form-group">
+                  <span class="error" style="font-size: 15px; color: red;" id="error-message"></span>
+                </div>
+
+
 
               </div>
 
@@ -642,12 +559,14 @@
           </div><!-- Card Item -->
 
 
-          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
+          <div class="col-lg-6 aos-init aos-animate" data-aos="fade-up" data-aos-delay="100">
             <div class="card-item">
               <!-- <img class="slider-bg" src="assets/img/events-bg.jpg" alt="" data-aos="fade-in"> -->
-              <span class="text-center mb-3">Premium Screen</span>
+              <span class="text-center mb-3">Premium Screen-2</span>
               <div class="container">
-                <div class="swiper init-swiper" data-aos="fade-up" data-aos-delay="100">
+                <div
+                  class="swiper init-swiper aos-init aos-animate swiper-initialized swiper-horizontal swiper-backface-hidden"
+                  data-aos="fade-up" data-aos-delay="100">
                   <script type="application/json" class="swiper-config">
                             {
                                 "loop": true,
@@ -663,9 +582,11 @@
                                 }
                             }
                         </script>
-                  <div class="swiper-wrapper">
+                  <div class="swiper-wrapper" id="swiper-wrapper-8b9977daf61037735" aria-live="off"
+                    style="transition-duration: 0ms; transform: translate3d(-362px, 0px, 0px); transition-delay: 0ms;">
                     <!-- Mini Theatre with Friends and Family -->
-                    <div class="swiper-slide">
+                    <div class="swiper-slide swiper-slide-prev" role="group" aria-label="1 / 4"
+                      data-swiper-slide-index="0">
                       <div class="row gy-4 event-item">
                         <div class="col-lg-12">
                           <img src="assets/img/hero-bg5.png" class="img-fluid"
@@ -675,7 +596,8 @@
                     </div><!-- End Mini Theatre -->
 
                     <!-- Birthday Events -->
-                    <div class="swiper-slide">
+                    <div class="swiper-slide swiper-slide-active" role="group" aria-label="2 / 4"
+                      data-swiper-slide-index="1">
                       <div class="row gy-4 event-item">
                         <div class="col-lg-12">
                           <img src="assets/img/hero-bg5.png" class="img-fluid" alt="Birthday Events">
@@ -684,7 +606,8 @@
                     </div><!-- End Birthday Parties -->
 
                     <!-- Mom-to-Be Events -->
-                    <div class="swiper-slide">
+                    <div class="swiper-slide swiper-slide-next" role="group" aria-label="3 / 4"
+                      data-swiper-slide-index="2">
                       <div class="row gy-4 event-item">
                         <div class="col-lg-12">
                           <img src="assets/img/hero-bg5.png" class="img-fluid" alt="Mom-to-Be Events">
@@ -693,7 +616,7 @@
                     </div><!-- End Mom-to-Be Events -->
 
                     <!-- Small Private Parties -->
-                    <div class="swiper-slide">
+                    <div class="swiper-slide" role="group" aria-label="4 / 4" data-swiper-slide-index="3">
                       <div class="row gy-4 event-item">
                         <div class="col-lg-12">
                           <img src="assets/img/hero-bg5.png" class="img-fluid" alt="Small Private Parties">
@@ -703,7 +626,16 @@
 
                     <!-- More event types can be added here in the future -->
                   </div>
-                  <div class="swiper-pagination"></div>
+                  <div
+                    class="swiper-pagination swiper-pagination-clickable swiper-pagination-bullets swiper-pagination-horizontal">
+                    <span class="swiper-pagination-bullet" tabindex="0" role="button"
+                      aria-label="Go to slide 1"></span><span
+                      class="swiper-pagination-bullet swiper-pagination-bullet-active" tabindex="0" role="button"
+                      aria-label="Go to slide 2" aria-current="true"></span><span class="swiper-pagination-bullet"
+                      tabindex="0" role="button" aria-label="Go to slide 3"></span><span
+                      class="swiper-pagination-bullet" tabindex="0" role="button" aria-label="Go to slide 4"></span>
+                  </div>
+                  <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span>
                 </div>
               </div>
               <h4><a href="">Platinum Theatre</a></h4>
@@ -721,47 +653,30 @@
 
                 <h5 class="mt-2">Choose your slot</h5>
 
-                <div class="form-group d-flex">
-                  <select class="form-control mr-2" id="time-slot">
-                    <option value="9:30 AM - 12:30 PM">9:30 AM - 12:30 PM</option>
-                    <option value="1:00 PM - 4:00 PM">1:00 PM - 4:00 PM</option>
-                    <option value="4:30 PM - 6:00 PM">4:30 PM - 6:00 PM</option>
-                    <option value="6:30 PM - 9:30 PM">6:30 PM - 9:30 PM</option>
-                    <option value="10:00 PM - 1:00 AM">10:00 PM - 1:00 AM</option>
-                  </select>
+                <div class="form-group">
+                  <button type="button" id="btn1" value="9:30 AM - 12:30 PM">9:30 AM - 12:30 PM</button>
+                  <button type="button" id="btn2" value="1:00 PM - 4:00 PM" class="disabled" disabled="">1:00 PM - 4:00
+                    PM</button>
+                  <button type="button" id="btn3" value="4:30 PM - 6:00 PM">4:30 PM - 6:00 PM</button>
+                  <button type="button" id="btn4" value="6:30 PM - 9:30 PM">6:30 PM - 9:30 PM</button>
+                  <button type="button" class="text-center disabled" id="btn5" value="10:00 PM - 1:00 AM"
+                    disabled="">10:00 PM - 1:00 AM</button>
                 </div>
 
-                <script>
-                  // Function to strike off and disable specific time slots
-                  function updateTimeSlots() {
-                    const selectElement = document.getElementById("time-slot");
-                    const options = selectElement.options;
+                <div class="form-group">
+                  <button type="submit" class="d-block text-center" id="proceed" disabled="">Proceed</button>
+                </div>
 
-                    // Example: Disable and strike off the 1:00 PM - 4:00 PM and 10:00 PM - 1:00 AM slots
-                    const disabledSlots = ["1:00 PM - 4:00 PM", "10:00 PM - 1:00 AM"];
+                <div class="form-group">
+                  <span class="error" style="font-size: 15px; color: red;" id="error-message"></span>
+                </div>
 
-                    for (let i = 0; i < options.length; i++) {
-                      // Disable and strike off the options that are in the disabledSlots array
-                      if (disabledSlots.includes(options[i].value)) {
-                        options[i].disabled = true; // Disable the option
-                        options[i].style.textDecoration = "line-through"; // Strike off the text
-                        options[i].style.color = "gray"; // Optionally change color to gray to indicate it's disabled
-                      } else {
-                        options[i].disabled = false; // Enable the option if not in the disabledSlots array
-                        options[i].style.textDecoration = "none"; // Remove any strikethrough
-                        options[i].style.color = "black"; // Restore color to black
-                      }
-                    }
-                  }
 
-                  // Call the function on page load to update the time slots
-                  updateTimeSlots();
-                </script>
 
               </div>
 
             </div>
-          </div><!-- Card Item -->
+          </div>
         </div>
 
       </div>
@@ -831,6 +746,100 @@
 
   <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
+
+  <script>
+    // Array of unavailable time slots (these will be disabled and struck through)
+    const unavailableSlots = [
+      "1:00 PM - 4:00 PM",  // Example: Disabled slot
+      "10:00 PM - 1:00 AM"  // Example: Disabled slot
+    ];
+
+    // Store the selected button value
+    let selectedTimeSlot = null;
+    let selectedDate = null;
+
+    // Get all the buttons
+    const buttons = document.querySelectorAll('.form-group button[type="button"]');
+    const datePicker = document.getElementById('date-picker');
+    const proceedButton = document.getElementById('proceed');
+    const errorMessage = document.getElementById('error-message');
+
+    // Disable and strike-through unavailable time slots
+    buttons.forEach(button => {
+      if (unavailableSlots.includes(button.value)) {
+        button.classList.add('disabled'); // Add 'disabled' class to button
+        button.disabled = true;           // Disable the button functionality
+      }
+    });
+
+    // Add event listeners to buttons
+    buttons.forEach(button => {
+      button.addEventListener('click', function () {
+        if (!button.classList.contains('disabled')) {
+          // Toggle the 'selected' class to mark the button
+          buttons.forEach(b => b.classList.remove('selected')); // Remove 'selected' class from all buttons
+          button.classList.add('selected'); // Add 'selected' class to the clicked button
+
+          // Save the selected time slot
+          selectedTimeSlot = button.value;
+
+          // Enable the Proceed button and change its style
+          proceedButton.disabled = false;
+          proceedButton.classList.add('enabled');
+
+          // Reset error message
+          errorMessage.textContent = "";
+        }
+      });
+    });
+
+    // Add event listener to date picker
+    datePicker.addEventListener('change', function () {
+      selectedDate = datePicker.value;
+
+      // Reset error message if a date is selected
+      errorMessage.textContent = "";
+    });
+
+    // Function to get the current date
+    function getCurrentDate() {
+      return new Date().toLocaleDateString();
+    }
+
+    // Function to get the selected time slot
+    function getSelectedTimeSlot() {
+      return selectedTimeSlot;
+    }
+
+    // Function to build the URL with selected time slot and date
+    function buildRedirectUrl(timeSlot, date) {
+      return `nextpage.html?time=${encodeURIComponent(timeSlot)}&date=${encodeURIComponent(date)}`;
+    }
+
+    // Add event listener to the Proceed button
+    proceedButton.addEventListener('click', function () {
+      // Get the selected time slot and current date
+      const timeSlot = getSelectedTimeSlot();
+      const date = selectedDate || getCurrentDate(); // Use the selected date, or fallback to today's date if not selected
+
+      // Validation: Check if a date and time slot are selected
+      if (!selectedDate) {
+        errorMessage.textContent = "Please select a date.";
+        return;
+      }
+
+      if (!timeSlot) {
+        errorMessage.textContent = "Please select a time slot.";
+        return;
+      }
+
+      // Build the URL with time slot and date
+      const url = buildRedirectUrl(timeSlot, date);
+
+      // Redirect to the next page
+      window.location.href = url; // Redirect to the next page
+    });
+  </script>
 
 </body>
 
