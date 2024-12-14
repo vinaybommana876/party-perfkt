@@ -161,6 +161,11 @@
     }
   }
 
+  .why-us .card-item {
+      /* padding: 20px 30px; */
+      border-radius: 30px;
+      margin: 5px;
+    }
   .member {
     border-radius: 15px;
     box-shadow: 4px 4px 7px rgb(237, 232, 232);
@@ -246,6 +251,7 @@
     /* margin-top: 10px; */
     background: none;
   }
+  
 </style>
 
 <body class="index-page">
@@ -376,7 +382,7 @@
 
         <div class="row gy-4">
 
-          <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
             <div class="card-item">
               <!-- <img class="slider-bg" src="assets/img/events-bg.jpg" alt="" data-aos="fade-in"> -->
               <span class="text-center mb-3">Premium Screen</span>
@@ -440,7 +446,131 @@
                   <div class="swiper-pagination"></div>
                 </div>
               </div>
-              <h4><a href="" >Platinum Theatre</a></h4>
+              <h4><a href="">Platinum Theatre</a></h4>
+              <!-- Platinum Theatre Section Below the Images -->
+              <div class="platinum-theatre-info">
+                <div><i class="bi bi-calendar-check"></i> <strong>Slots Available:</strong> 5</div>
+                <div><i class="bi bi-cash"></i> <strong>Price:</strong> ₹2799 for 6 people (including taxes)</div>
+                <div><i class="bi bi-check2-circle"></i> <strong>Max People:</strong> 12</div>
+                <div><i class="bi bi-check2-circle"></i> <strong>Decoration:</strong> ₹749</div>
+                <div><i class="bi bi-check2-circle"></i> <strong>Extra Person:</strong> ₹400 per person</div>
+                <div><i class="bi bi-check2-circle"></i> <strong class="small-text">Optional Add-ons:</strong> Cakes,
+                  Photography</div>
+                <div><i class="bi bi-check2-circle"></i> <strong class="small-text">Cancellation Policy:</strong> Refund
+                  eligible if cancelled 72 hours before the slot time</div>
+
+                <h5 class="mt-2">Choose your slot</h5>
+
+                <div class="form-group d-xl-flex">
+                  <button type="submit" id="btn1" value="9:30 AM - 12:30 PM">9:30 AM - 12:30 PM</button>
+                  <button type="submit" id="btn2" value="1:00 PM - 4:00 PM">1:00 PM - 4:00 PM</button>
+                  <button type="submit" id="btn3" value="4:30 PM - 6:00 PM">4:30 PM - 6:00 PM</button>
+                  <button type="submit" id="btn4" value="6:30 PM - 9:30 PM">6:30 PM - 9:30 PM</button>
+                  <button type="submit" id="btn5" value="10:00 PM - 1:00 AM">10:00 PM - 1:00 AM</button>
+              </div>
+              
+              <script>
+              // Function to disable and strike off specific time slots
+              function updateTimeSlots() {
+                  // Array of time slots that need to be disabled and struck off
+                  const disabledSlots = [
+                      "1:00 PM - 4:00 PM",  // Example: Disable this slot
+                      "10:00 PM - 1:00 AM"  // Example: Disable this slot
+                  ];
+              
+                  // Loop through all buttons (representing time slots)
+                  const buttons = document.querySelectorAll('.form-group button');
+                  
+                  buttons.forEach((button) => {
+                      // If the button's value is in the disabledSlots array, disable it
+                      if (disabledSlots.includes(button.value)) {
+                          button.disabled = true;  // Disable the button
+                          button.style.textDecoration = "line-through";  // Strike-through the text
+                          button.style.color = "gray";  // Change text color to gray for disabled state
+                      } else {
+                          button.disabled = false;  // Enable the button
+                          button.style.textDecoration = "none";  // Remove the strike-through
+                          button.style.color = "black";  // Reset text color to black
+                      }
+                  });
+              }
+              
+              // Call the function to update the time slots on page load
+              updateTimeSlots();
+              </script>
+              
+
+              </div>
+
+            </div>
+          </div><!-- Card Item -->
+
+
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
+            <div class="card-item">
+              <!-- <img class="slider-bg" src="assets/img/events-bg.jpg" alt="" data-aos="fade-in"> -->
+              <span class="text-center mb-3">Premium Screen</span>
+              <div class="container">
+                <div class="swiper init-swiper" data-aos="fade-up" data-aos-delay="100">
+                  <script type="application/json" class="swiper-config">
+                            {
+                                "loop": true,
+                                "speed": 600,
+                                "autoplay": {
+                                    "delay": 5000
+                                },
+                                "slidesPerView": "auto",
+                                "pagination": {
+                                    "el": ".swiper-pagination",
+                                    "type": "bullets",
+                                    "clickable": true
+                                }
+                            }
+                        </script>
+                  <div class="swiper-wrapper">
+                    <!-- Mini Theatre with Friends and Family -->
+                    <div class="swiper-slide">
+                      <div class="row gy-4 event-item">
+                        <div class="col-lg-12">
+                          <img src="assets/img/hero-bg5.png" class="img-fluid"
+                            alt="Mini Theatre with Friends and Family">
+                        </div>
+                      </div>
+                    </div><!-- End Mini Theatre -->
+
+                    <!-- Birthday Events -->
+                    <div class="swiper-slide">
+                      <div class="row gy-4 event-item">
+                        <div class="col-lg-12">
+                          <img src="assets/img/hero-bg5.png" class="img-fluid" alt="Birthday Events">
+                        </div>
+                      </div>
+                    </div><!-- End Birthday Parties -->
+
+                    <!-- Mom-to-Be Events -->
+                    <div class="swiper-slide">
+                      <div class="row gy-4 event-item">
+                        <div class="col-lg-12">
+                          <img src="assets/img/hero-bg5.png" class="img-fluid" alt="Mom-to-Be Events">
+                        </div>
+                      </div>
+                    </div><!-- End Mom-to-Be Events -->
+
+                    <!-- Small Private Parties -->
+                    <div class="swiper-slide">
+                      <div class="row gy-4 event-item">
+                        <div class="col-lg-12">
+                          <img src="assets/img/hero-bg5.png" class="img-fluid" alt="Small Private Parties">
+                        </div>
+                      </div>
+                    </div><!-- End Small Private Parties -->
+
+                    <!-- More event types can be added here in the future -->
+                  </div>
+                  <div class="swiper-pagination"></div>
+                </div>
+              </div>
+              <h4><a href="">Platinum Theatre</a></h4>
               <!-- Platinum Theatre Section Below the Images -->
               <div class="platinum-theatre-info">
                 <div><i class="bi bi-calendar-check"></i> <strong>Slots Available:</strong> 5</div>
@@ -457,36 +587,43 @@
 
                 <div class="form-group d-flex">
                   <select class="form-control mr-2" id="time-slot">
-                      <option value="9:30 AM - 12:30 PM">9:30 AM - 12:30 PM</option>
-                      <option value="1:00 PM - 4:00 PM">1:00 PM - 4:00 PM</option>
-                      <option value="4:30 PM - 6:00 PM">4:30 PM - 6:00 PM</option>
-                      <option value="6:30 PM - 9:30 PM">6:30 PM - 9:30 PM</option>
-                      <option value="10:00 PM - 1:00 AM">10:00 PM - 1:00 AM</option>
+                    <option value="9:30 AM - 12:30 PM">9:30 AM - 12:30 PM</option>
+                    <option value="1:00 PM - 4:00 PM">1:00 PM - 4:00 PM</option>
+                    <option value="4:30 PM - 6:00 PM">4:30 PM - 6:00 PM</option>
+                    <option value="6:30 PM - 9:30 PM">6:30 PM - 9:30 PM</option>
+                    <option value="10:00 PM - 1:00 AM">10:00 PM - 1:00 AM</option>
                   </select>
+                </div>
+
+                <script>
+                  // Function to strike off and disable specific time slots
+                  function updateTimeSlots() {
+                    const selectElement = document.getElementById("time-slot");
+                    const options = selectElement.options;
+
+                    // Example: Disable and strike off the 1:00 PM - 4:00 PM and 10:00 PM - 1:00 AM slots
+                    const disabledSlots = ["1:00 PM - 4:00 PM", "10:00 PM - 1:00 AM"];
+
+                    for (let i = 0; i < options.length; i++) {
+                      // Disable and strike off the options that are in the disabledSlots array
+                      if (disabledSlots.includes(options[i].value)) {
+                        options[i].disabled = true; // Disable the option
+                        options[i].style.textDecoration = "line-through"; // Strike off the text
+                        options[i].style.color = "gray"; // Optionally change color to gray to indicate it's disabled
+                      } else {
+                        options[i].disabled = false; // Enable the option if not in the disabledSlots array
+                        options[i].style.textDecoration = "none"; // Remove any strikethrough
+                        options[i].style.color = "black"; // Restore color to black
+                      }
+                    }
+                  }
+
+                  // Call the function on page load to update the time slots
+                  updateTimeSlots();
+                </script>
+
               </div>
-              
-              </div>
 
-            </div>
-          </div><!-- Card Item -->
-
-
-          <div class="col-lg-4" data-aos="fade-up" data-aos-delay="200">
-            <div class="card-item">
-              <span>02</span>
-              <h4><a href="" class="stretched-link">Customization</a></h4>
-              <p>Your event is unique, and so are our services. We work closely with you to understand your vision and
-                bring it to life with personalized touches that reflect your style.</p>
-            </div>
-          </div><!-- Card Item -->
-
-          <div class="col-lg-4" data-aos="fade-up" data-aos-delay="300">
-            <div class="card-item">
-              <span>03</span>
-              <h4><a href="" class="stretched-link">Mini Theater Experience</a></h4>
-              <p>Immerse yourself in our bespoke mini theater setups, perfect for private screenings, movie nights, or
-                gaming parties. We provide state-of-the-art equipment and cozy seating arrangements to elevate your
-                entertainment experience.</p>
             </div>
           </div><!-- Card Item -->
         </div>
