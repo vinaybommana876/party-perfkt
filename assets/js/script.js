@@ -58,3 +58,25 @@ const images = [
 
       startTextAnimation(0);
     });
+
+    // This script will duplicate the offer text to create a seamless scrolling effect
+    document.addEventListener("DOMContentLoaded", function() {
+      const scrollingMessage = document.querySelector('.scrolling-message');
+      const offerText = document.querySelector('.offer-text');
+      
+      // Keep appending the offer text to itself every 100ms to create infinite scrolling
+      const duplicateText = () => {
+        // Clone the original text
+        const clonedText = offerText.cloneNode(true);
+        
+        // Append the cloned text to the scrolling container
+        scrollingMessage.appendChild(clonedText);
+        
+        // Repeat the process
+        requestAnimationFrame(duplicateText);
+      };
+      
+      // Start the duplication process
+      duplicateText();
+    });
+    

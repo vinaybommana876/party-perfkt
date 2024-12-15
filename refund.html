@@ -39,12 +39,52 @@
 </head>
 
 <style>
-  /* Styling for the offer text */
-  .offer-text {
-    font-size: 18px;
-    font-weight: 600;
-    color: #fff;
+.scrolling-message {
+  display: flex;
+  white-space: nowrap;
+  overflow: hidden;
+  position: relative;
+  width: 100%; /* Full width */
+}
+
+.offer-text {
+  font-size: 18px;
+  font-weight: 600;
+  color: #fff;
+  white-space: nowrap;
+  display: inline-block;
+  padding-right: 50px; /* Add some space after text */
+  animation: scroll-left 10s linear infinite;
+}
+
+/* Scroll animation */
+@keyframes scroll-left {
+  0% {
+    transform: translateX(100%); /* Start from the right */
   }
+  100% {
+    transform: translateX(-100%); /* End at the left */
+  }
+}
+
+/* Responsive adjustments for mobile screens */
+@media (max-width: 768px) {
+  .offer-text {
+    font-size: 16px; /* Smaller font size for mobile */
+  }
+
+  .scrolling-message {
+    animation-duration: 20s; /* Faster scrolling on mobile */
+  }
+}
+
+@media (max-width: 500px) {
+  .offer-text {
+    font-size: 14px; /* Even smaller font size for very small screens */
+  }
+}
+
+
 
   /* Icons styling */
   .fas {
@@ -72,6 +112,10 @@
   .hero img.zoom {
     transform: scale(1.5);
     /* Zoom in the image */
+  }
+
+  .header .branding{
+    min-height: 10px;
   }
 
   .whatsapp-link {
@@ -196,9 +240,9 @@
     /* Increase padding to make the button bigger */
     background-color: transparent;
     /* Transparent background */
-    color: #ffbb00;
+    color: #fabd05;
     /* Text color */
-    border: 2px solid #CDA45D;
+    border: 2px solid #fabd05;
     /* Border same color as text */
     border-radius: 25px;
     /* Add border radius for rounded corners */
@@ -209,7 +253,7 @@
   }
 
   .btn-book-a-table:hover {
-    background-color: #CDA45D;
+    background-color: #fabd05;
     /* On hover, background color changes to the same as text */
     color: white;
     /* Change text color to white on hover */
@@ -217,39 +261,39 @@
 
   input[type="date"] {
     background-color: #0e0d0d;
-    border: 1px solid #CDA45D;
+    border: 1px solid #fabd05;
     border-radius: 5px;
     padding: 10px;
     font-size: 16px;
     width: 100%;
     transition: border-color 0.5s ease, box-shadow 0.5s ease;
-    color: #CDA45D;
+    color: #fabd05;
     /* Ensures text is visible on dark background */
   }
 
   input[type="date"]:focus {
-    border-color: #CDA45D;
+    border-color: #fabd05;
     outline: none;
     box-shadow: 0 0 10px rgba(228, 228, 4, 0.919);
     /* Adds glowing effect on focus */
   }
 
   input[type="date"]:hover {
-    border-color: #CDA45D;
+    border-color: #fabd05;
     /* Changes border color when hovered */
     box-shadow: 0 0 5px rgba(206, 165, 16, 0.4);
     /* Subtle shadow effect on hover */
   }
 
   input[type="date"]::-webkit-calendar-picker-indicator {
-    background-color: #CDA45D;
+    background-color: #fabd05;
     border-radius: 5px;
     transition: background-color 0.3s ease;
   }
 
   /* Optional: Darken the indicator slightly when hovering */
   input[type="date"]:hover::-webkit-calendar-picker-indicator {
-    background-color: #CDA45D;
+    background-color: #fabd05;
   }
 
   .section-title h2::after {
@@ -270,7 +314,7 @@
             font-size: 14px;
             background-color: #3e3d3b;
             color: white;
-            border: 1px #CDA45D;
+            border: 1px #fabd05;
             border-radius: 20px;
             cursor: pointer;
             transition: background-color 0.3s ease;
@@ -278,12 +322,12 @@
 
         /* When a button is selected */
         .form-group button.selected {
-            background-color: #CDA45D; /* Green for selected */
+            background-color: #fabd05; /* Green for selected */
         }
 
         /* Button hover effect */
         .form-group button:hover {
-            background-color: #CDA45D;
+            background-color: #fabd05;
         }
 
         /* Disabled (unavailable) button */
@@ -312,7 +356,7 @@
         .form-group #proceed.enabled {
             cursor: pointer;
             color: white;
-            background-color: #CDA45D; /* Green when enabled */
+            background-color: #fabd05; /* Green when enabled */
         }
 
         .why-us .card-item:hover .form-group #proceed {
@@ -388,6 +432,11 @@
       </div>
 
     </div>
+    <div class="branding d-flex align-items-center">
+      <div class="scrolling-message d-flex align-items-center">
+        <span class="offer-text">Hurrah!! <i class="fas fa-gift mr-2"></i> LIMITED TIME OFFER: Use Coupon "MORNING" to get Rs 300 off for morning slots. <i class="fas fa-clock"></i> Hurry up!</span>
+      </div>
+    </div>
 
 
   </header>
@@ -399,7 +448,7 @@
       style="background-image: url(assets/img/page-title-bg.webp); height: 300px;">
       <div class="container position-relative">
         <h1>Refund Policy</h1>
-        <nav class="breadcrumbs">
+        <nav class="breadcrumbs" style="height: 10px;">
           <ol>
             <li><a href="index.html">Home</a></li>
             <li class="current">Refund Policy</li>
@@ -491,6 +540,7 @@
 
   <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
+  <script src="assets/js/script.js"></script>
 
 </body>
 
